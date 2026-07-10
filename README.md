@@ -1,10 +1,11 @@
 # FLARE
 
+**A Forced Latent Autoencoder for Response Equations**
+
 <p align="center">
-  <img src="FLARE/figures/fig0.svg" alt="FLARE framework" width="100%">
+  <img src="figures/fig0.svg" alt="FLARE framework" width="100%">
 </p>
 
-**A Forced Latent Autoencoder for Response Equations**
 
 ## Paper
 
