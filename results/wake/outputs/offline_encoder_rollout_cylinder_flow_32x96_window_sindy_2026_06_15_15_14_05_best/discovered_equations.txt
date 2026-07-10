@@ -1,0 +1,13 @@
+Discovered latent SINDy equations
+model_order: 1
+latent_dim: 4
+pca_selected_dim: 4
+feature variables: ['z1', 'z2', 'z3', 'z4', 'f']
+normalize_forcing: True
+forcing_mixed_terms: False
+Note: if normalize_forcing=True, forcing terms use the train-set normalized forcing coordinate.
+
+dz1 = -0.14489895*z1 - 0.022307646*z2 + 0.13716245*z3 - 0.0085343234*z4 + 0.010374894*z2*z3 + 0.28683409*f
+dz2 = 0.0089485813*z4
+dz3 = 0.13035308*z1 + 0.018688876*z2 - 0.12431514*z3 + 0.0075364378*z4 - 0.009413722*z2*z3 - 0.25831297*f
+dz4 = -0.0055302582*z2

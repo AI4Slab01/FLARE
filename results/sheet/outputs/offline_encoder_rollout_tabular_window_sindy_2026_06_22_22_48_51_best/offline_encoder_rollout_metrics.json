@@ -1,0 +1,99 @@
+{
+  "checkpoint": "outputs/tabular_window_sindy_2026_06_22_22_48_51_best.pt",
+  "test_dir": "test",
+  "model_order": 1,
+  "latent_dim": 4,
+  "pca_selected_dim": 4,
+  "pre_pca_latent_dim": 16,
+  "pca_variance_threshold": 0.95,
+  "poly_order": 1,
+  "window_length": 5,
+  "start_index": 0,
+  "normalize_x": true,
+  "normalize_forcing": true,
+  "initial_condition_mode": "encoder",
+  "mean_masked_mse": 0.023823217116296293,
+  "mean_masked_rmse": 0.15325155462342127,
+  "files": [
+    {
+      "file_name": "sheet_test_000.npy",
+      "num_steps": 500,
+      "dt": 0.40000152587890625,
+      "start_index": 0,
+      "masked_mse": 0.01697332225739956,
+      "masked_rmse": 0.13028170346368503
+    },
+    {
+      "file_name": "sheet_test_001.npy",
+      "num_steps": 500,
+      "dt": 0.40000152587890625,
+      "start_index": 0,
+      "masked_mse": 0.026150688529014587,
+      "masked_rmse": 0.16171174517954653
+    },
+    {
+      "file_name": "sheet_test_002.npy",
+      "num_steps": 500,
+      "dt": 0.40000152587890625,
+      "start_index": 0,
+      "masked_mse": 0.03263628110289574,
+      "masked_rmse": 0.18065514413626793
+    },
+    {
+      "file_name": "sheet_test_003.npy",
+      "num_steps": 500,
+      "dt": 0.40000152587890625,
+      "start_index": 0,
+      "masked_mse": 0.022724423557519913,
+      "masked_rmse": 0.15074622236566962
+    },
+    {
+      "file_name": "sheet_test_004.npy",
+      "num_steps": 500,
+      "dt": 0.40000152587890625,
+      "start_index": 0,
+      "masked_mse": 0.01753518357872963,
+      "masked_rmse": 0.13242048020880165
+    },
+    {
+      "file_name": "sheet_test_005.npy",
+      "num_steps": 500,
+      "dt": 0.40000152587890625,
+      "start_index": 0,
+      "masked_mse": 0.026125552132725716,
+      "masked_rmse": 0.16163400673350184
+    },
+    {
+      "file_name": "sheet_test_006.npy",
+      "num_steps": 500,
+      "dt": 0.40000152587890625,
+      "start_index": 0,
+      "masked_mse": 0.023913921788334846,
+      "masked_rmse": 0.15464126806365386
+    },
+    {
+      "file_name": "sheet_test_007.npy",
+      "num_steps": 500,
+      "dt": 0.40000152587890625,
+      "start_index": 0,
+      "masked_mse": 0.015254160389304161,
+      "masked_rmse": 0.1235077341274795
+    },
+    {
+      "file_name": "sheet_test_008.npy",
+      "num_steps": 500,
+      "dt": 0.40000152587890625,
+      "start_index": 0,
+      "masked_mse": 0.03149179741740227,
+      "masked_rmse": 0.1774592838298472
+    },
+    {
+      "file_name": "sheet_test_009.npy",
+      "num_steps": 500,
+      "dt": 0.40000152587890625,
+      "start_index": 0,
+      "masked_mse": 0.025426840409636497,
+      "masked_rmse": 0.15945795812575958
+    }
+  ]
+}

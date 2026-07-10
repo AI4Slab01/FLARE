@@ -1,0 +1,99 @@
+{
+  "checkpoint": "outputs/tabular_window_sindy_2026_06_07_22_20_21_best.pt",
+  "test_dir": "test",
+  "model_order": 1,
+  "latent_dim": 2,
+  "pca_selected_dim": 2,
+  "pre_pca_latent_dim": 2,
+  "pca_variance_threshold": NaN,
+  "poly_order": 3,
+  "window_length": 2,
+  "start_index": 0,
+  "normalize_x": true,
+  "normalize_forcing": false,
+  "initial_condition_mode": "encoder",
+  "mean_masked_mse": 0.0003115159503067844,
+  "mean_masked_rmse": 0.01723995719710681,
+  "files": [
+    {
+      "file_name": "hopf_001.npy",
+      "num_steps": 500,
+      "dt": 0.1202402114868164,
+      "start_index": 0,
+      "masked_mse": 0.0002183670294471085,
+      "masked_rmse": 0.014777247018545386
+    },
+    {
+      "file_name": "hopf_002.npy",
+      "num_steps": 500,
+      "dt": 0.1202402114868164,
+      "start_index": 0,
+      "masked_mse": 0.0006046484922990203,
+      "masked_rmse": 0.024589601304189954
+    },
+    {
+      "file_name": "hopf_003.npy",
+      "num_steps": 500,
+      "dt": 0.1202402114868164,
+      "start_index": 0,
+      "masked_mse": 0.0004562929389066994,
+      "masked_rmse": 0.021361014463426108
+    },
+    {
+      "file_name": "hopf_004.npy",
+      "num_steps": 500,
+      "dt": 0.1202402114868164,
+      "start_index": 0,
+      "masked_mse": 0.0002687706728465855,
+      "masked_rmse": 0.016394226814540096
+    },
+    {
+      "file_name": "hopf_005.npy",
+      "num_steps": 500,
+      "dt": 0.1202402114868164,
+      "start_index": 0,
+      "masked_mse": 0.00039539445424452424,
+      "masked_rmse": 0.01988452801161054
+    },
+    {
+      "file_name": "hopf_006.npy",
+      "num_steps": 500,
+      "dt": 0.1202402114868164,
+      "start_index": 0,
+      "masked_mse": 0.0001241093996213749,
+      "masked_rmse": 0.011140439830696762
+    },
+    {
+      "file_name": "hopf_007.npy",
+      "num_steps": 500,
+      "dt": 0.1202402114868164,
+      "start_index": 0,
+      "masked_mse": 0.00026406068354845047,
+      "masked_rmse": 0.016249944109086974
+    },
+    {
+      "file_name": "hopf_008.npy",
+      "num_steps": 500,
+      "dt": 0.1202402114868164,
+      "start_index": 0,
+      "masked_mse": 0.0003433039237279445,
+      "masked_rmse": 0.01852846253006289
+    },
+    {
+      "file_name": "hopf_009.npy",
+      "num_steps": 500,
+      "dt": 0.1202402114868164,
+      "start_index": 0,
+      "masked_mse": 0.00016969579155556858,
+      "masked_rmse": 0.013026733725518788
+    },
+    {
+      "file_name": "hopf_010.npy",
+      "num_steps": 500,
+      "dt": 0.1202402114868164,
+      "start_index": 0,
+      "masked_mse": 0.0002705161168705672,
+      "masked_rmse": 0.016447374163390555
+    }
+  ]
+}

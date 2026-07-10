@@ -1,0 +1,99 @@
+{
+  "checkpoint": "outputs/tabular_window_sindy_2026_05_31_20_22_30_best.pt",
+  "test_dir": "test",
+  "model_order": 2,
+  "latent_dim": 4,
+  "pca_selected_dim": 4,
+  "pre_pca_latent_dim": 16,
+  "pca_variance_threshold": NaN,
+  "poly_order": 2,
+  "window_length": 5,
+  "start_index": 0,
+  "normalize_x": true,
+  "normalize_forcing": true,
+  "initial_condition_mode": "encoder",
+  "mean_masked_mse": 3.715432594617596e-05,
+  "mean_masked_rmse": 0.005997557885308613,
+  "files": [
+    {
+      "file_name": "panda_test_traj_000.npy",
+      "num_steps": 500,
+      "dt": 0.019999980926513672,
+      "start_index": 0,
+      "masked_mse": 2.4402481358265504e-05,
+      "masked_rmse": 0.004939886775854838
+    },
+    {
+      "file_name": "panda_test_traj_001.npy",
+      "num_steps": 500,
+      "dt": 0.019999980926513672,
+      "start_index": 0,
+      "masked_mse": 3.3869637263705954e-05,
+      "masked_rmse": 0.005819762646681216
+    },
+    {
+      "file_name": "panda_test_traj_002.npy",
+      "num_steps": 500,
+      "dt": 0.019999980926513672,
+      "start_index": 0,
+      "masked_mse": 3.282924080849625e-05,
+      "masked_rmse": 0.005729680689924723
+    },
+    {
+      "file_name": "panda_test_traj_003.npy",
+      "num_steps": 500,
+      "dt": 0.019999980926513672,
+      "start_index": 0,
+      "masked_mse": 3.276559800724499e-05,
+      "masked_rmse": 0.005724124213121601
+    },
+    {
+      "file_name": "panda_test_traj_004.npy",
+      "num_steps": 500,
+      "dt": 0.019999980926513672,
+      "start_index": 0,
+      "masked_mse": 2.4643393771839328e-05,
+      "masked_rmse": 0.004964211294036479
+    },
+    {
+      "file_name": "panda_test_traj_005.npy",
+      "num_steps": 500,
+      "dt": 0.019999980926513672,
+      "start_index": 0,
+      "masked_mse": 3.466206544544548e-05,
+      "masked_rmse": 0.005887449825301739
+    },
+    {
+      "file_name": "panda_test_traj_006.npy",
+      "num_steps": 500,
+      "dt": 0.019999980926513672,
+      "start_index": 0,
+      "masked_mse": 8.057783998083323e-05,
+      "masked_rmse": 0.008976516026879985
+    },
+    {
+      "file_name": "panda_test_traj_007.npy",
+      "num_steps": 500,
+      "dt": 0.019999980926513672,
+      "start_index": 0,
+      "masked_mse": 3.0917635740479454e-05,
+      "masked_rmse": 0.0055603629144579635
+    },
+    {
+      "file_name": "panda_test_traj_008.npy",
+      "num_steps": 500,
+      "dt": 0.019999980926513672,
+      "start_index": 0,
+      "masked_mse": 4.340695886639878e-05,
+      "masked_rmse": 0.00658839577335779
+    },
+    {
+      "file_name": "panda_test_traj_009.npy",
+      "num_steps": 500,
+      "dt": 0.019999980926513672,
+      "start_index": 0,
+      "masked_mse": 3.3468408219050616e-05,
+      "masked_rmse": 0.0057851886934697835
+    }
+  ]
+}

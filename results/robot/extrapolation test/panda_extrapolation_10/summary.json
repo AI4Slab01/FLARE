@@ -1,0 +1,342 @@
+{
+  "system": "Franka Panda marker extrapolation inputs",
+  "format": "10 separate dict-style FLARE .npy files",
+  "source_generator": "generate_panda_extrapolation_10.py",
+  "base_generator": "generate_panda_marker_4input_dataset.py",
+  "n_samples": 10,
+  "output_root": "D:\\FLARE\\test files\\panda\\panda_extrapolation_10",
+  "output_dir": "D:\\FLARE\\test files\\panda\\panda_extrapolation_10\\test",
+  "dt_save_s": 0.02,
+  "save_length": 500,
+  "input_names": [
+    "qdes_joint1",
+    "qdes_joint2",
+    "qdes_joint4",
+    "qdes_joint6"
+  ],
+  "active_joint_names": [
+    "joint1",
+    "joint2",
+    "joint4",
+    "joint6"
+  ],
+  "sensor_names": [
+    "link1_m1_x",
+    "link1_m1_y",
+    "link1_m1_z",
+    "link1_m2_x",
+    "link1_m2_y",
+    "link1_m2_z",
+    "link1_m3_x",
+    "link1_m3_y",
+    "link1_m3_z",
+    "link1_m4_x",
+    "link1_m4_y",
+    "link1_m4_z",
+    "link1_m5_x",
+    "link1_m5_y",
+    "link1_m5_z",
+    "link2_m1_x",
+    "link2_m1_y",
+    "link2_m1_z",
+    "link2_m2_x",
+    "link2_m2_y",
+    "link2_m2_z",
+    "link2_m3_x",
+    "link2_m3_y",
+    "link2_m3_z",
+    "link2_m4_x",
+    "link2_m4_y",
+    "link2_m4_z",
+    "link2_m5_x",
+    "link2_m5_y",
+    "link2_m5_z",
+    "link3_m1_x",
+    "link3_m1_y",
+    "link3_m1_z",
+    "link3_m2_x",
+    "link3_m2_y",
+    "link3_m2_z",
+    "link3_m3_x",
+    "link3_m3_y",
+    "link3_m3_z",
+    "link3_m4_x",
+    "link3_m4_y",
+    "link3_m4_z",
+    "link3_m5_x",
+    "link3_m5_y",
+    "link3_m5_z",
+    "link4_m1_x",
+    "link4_m1_y",
+    "link4_m1_z",
+    "link4_m2_x",
+    "link4_m2_y",
+    "link4_m2_z",
+    "link4_m3_x",
+    "link4_m3_y",
+    "link4_m3_z",
+    "link4_m4_x",
+    "link4_m4_y",
+    "link4_m4_z",
+    "link4_m5_x",
+    "link4_m5_y",
+    "link4_m5_z",
+    "link5_m1_x",
+    "link5_m1_y",
+    "link5_m1_z",
+    "link5_m2_x",
+    "link5_m2_y",
+    "link5_m2_z",
+    "link5_m3_x",
+    "link5_m3_y",
+    "link5_m3_z",
+    "link5_m4_x",
+    "link5_m4_y",
+    "link5_m4_z",
+    "link5_m5_x",
+    "link5_m5_y",
+    "link5_m5_z",
+    "link6_m1_x",
+    "link6_m1_y",
+    "link6_m1_z",
+    "link6_m2_x",
+    "link6_m2_y",
+    "link6_m2_z",
+    "link6_m3_x",
+    "link6_m3_y",
+    "link6_m3_z",
+    "link6_m4_x",
+    "link6_m4_y",
+    "link6_m4_z",
+    "link6_m5_x",
+    "link6_m5_y",
+    "link6_m5_z",
+    "link7_m1_x",
+    "link7_m1_y",
+    "link7_m1_z",
+    "link7_m2_x",
+    "link7_m2_y",
+    "link7_m2_z",
+    "link7_m3_x",
+    "link7_m3_y",
+    "link7_m3_z",
+    "link7_m4_x",
+    "link7_m4_y",
+    "link7_m4_z",
+    "link7_m5_x",
+    "link7_m5_y",
+    "link7_m5_z"
+  ],
+  "sample_metadata": [
+    {
+      "case_index": 0,
+      "case_name": "slow_quasi_static",
+      "description": "Slow desired-angle motion with reduced offset amplitude.",
+      "file": "D:\\FLARE\\test files\\panda\\panda_extrapolation_10\\test\\panda_extrapolation_traj_000.npy",
+      "u_min": [
+        -0.1889999955892563,
+        -0.14699898660182953,
+        -1.7597875595092773,
+        1.4027901887893677
+      ],
+      "u_max": [
+        0.1889999955892563,
+        0.14699898660182953,
+        -1.3849583864212036,
+        1.7387897968292236
+      ],
+      "marker_abs_max_m": 0.8264504075050354,
+      "q_abs_max_rad": 1.764777421951294,
+      "dq_abs_max_rad_s": 0.27223747968673706
+    },
+    {
+      "case_index": 1,
+      "case_name": "mild_high_multisine",
+      "description": "Slightly faster smooth multisine with conservative amplitude.",
+      "file": "D:\\FLARE\\test files\\panda\\panda_extrapolation_10\\test\\panda_extrapolation_traj_001.npy",
+      "u_min": [
+        -0.13309304416179657,
+        -0.10309251397848129,
+        -1.7039003372192383,
+        1.4528778791427612
+      ],
+      "u_max": [
+        0.13213710486888885,
+        0.10326360911130905,
+        -1.4380964040756226,
+        1.6890631914138794
+      ],
+      "marker_abs_max_m": 0.809669554233551,
+      "q_abs_max_rad": 1.6950050592422485,
+      "dq_abs_max_rad_s": 0.6136085391044617
+    },
+    {
+      "case_index": 2,
+      "case_name": "in_phase",
+      "description": "All four active joints move in a shared phase relationship.",
+      "file": "D:\\FLARE\\test files\\panda\\panda_extrapolation_10\\test\\panda_extrapolation_traj_002.npy",
+      "u_min": [
+        -0.26099997758865356,
+        -0.20299997925758362,
+        -1.8317899703979492,
+        1.3387900590896606
+      ],
+      "u_max": [
+        0.260957807302475,
+        0.20296718180179596,
+        -1.309832215309143,
+        1.8027524948120117
+      ],
+      "marker_abs_max_m": 0.7768875360488892,
+      "q_abs_max_rad": 1.8314855098724365,
+      "dq_abs_max_rad_s": 0.5462232828140259
+    },
+    {
+      "case_index": 3,
+      "case_name": "opposed_pairs",
+      "description": "joint1/joint4 and joint2/joint6 move in opposed phases.",
+      "file": "D:\\FLARE\\test files\\panda\\panda_extrapolation_10\\test\\panda_extrapolation_traj_003.npy",
+      "u_min": [
+        -0.2609526813030243,
+        -0.20299988985061646,
+        -1.8317426443099976,
+        1.3387901782989502
+      ],
+      "u_max": [
+        0.260999858379364,
+        0.202963188290596,
+        -1.3097901344299316,
+        1.8027479648590088
+      ],
+      "marker_abs_max_m": 0.9506801962852478,
+      "q_abs_max_rad": 1.829313039779663,
+      "dq_abs_max_rad_s": 0.6701990962028503
+    },
+    {
+      "case_index": 4,
+      "case_name": "sequential_joint_sweeps",
+      "description": "The dominant motion shifts from one active joint to the next.",
+      "file": "D:\\FLARE\\test files\\panda\\panda_extrapolation_10\\test\\panda_extrapolation_traj_004.npy",
+      "u_min": [
+        -0.27895042300224304,
+        -0.21694518625736237,
+        -1.8497827053070068,
+        1.3227978944778442
+      ],
+      "u_max": [
+        0.20417183637619019,
+        0.1953190118074417,
+        -1.291871428489685,
+        1.8187534809112549
+      ],
+      "marker_abs_max_m": 0.8777323365211487,
+      "q_abs_max_rad": 1.8453521728515625,
+      "dq_abs_max_rad_s": 0.9644241333007812
+    },
+    {
+      "case_index": 5,
+      "case_name": "up_chirp",
+      "description": "Joint trajectories sweep gently from low to higher frequency.",
+      "file": "D:\\FLARE\\test files\\panda\\panda_extrapolation_10\\test\\panda_extrapolation_traj_005.npy",
+      "u_min": [
+        -0.24300000071525574,
+        -0.1889936923980713,
+        -1.8137884140014648,
+        1.3547909259796143
+      ],
+      "u_max": [
+        0.24299465119838715,
+        0.1889791488647461,
+        -1.3277902603149414,
+        1.7867861986160278
+      ],
+      "marker_abs_max_m": 0.8692448139190674,
+      "q_abs_max_rad": 1.8151174783706665,
+      "dq_abs_max_rad_s": 1.2100390195846558
+    },
+    {
+      "case_index": 6,
+      "case_name": "down_chirp",
+      "description": "Joint trajectories sweep gently from higher to low frequency.",
+      "file": "D:\\FLARE\\test files\\panda\\panda_extrapolation_10\\test\\panda_extrapolation_traj_006.npy",
+      "u_min": [
+        -0.2429894059896469,
+        -0.1889999955892563,
+        -1.813789963722229,
+        1.3547967672348022
+      ],
+      "u_max": [
+        0.2429923564195633,
+        0.18899932503700256,
+        -1.3277907371520996,
+        1.7867891788482666
+      ],
+      "marker_abs_max_m": 0.8297884464263916,
+      "q_abs_max_rad": 1.8135462999343872,
+      "dq_abs_max_rad_s": 1.11797297000885
+    },
+    {
+      "case_index": 7,
+      "case_name": "smooth_step_plateaus",
+      "description": "Smooth desired-angle plateaus replace sinusoidal training inputs.",
+      "file": "D:\\FLARE\\test files\\panda\\panda_extrapolation_10\\test\\panda_extrapolation_traj_007.npy",
+      "u_min": [
+        -0.15299999713897705,
+        -0.09799999743700027,
+        -1.7417900562286377,
+        1.4827899932861328
+      ],
+      "u_max": [
+        0.2160000056028366,
+        0.10499999672174454,
+        -1.4087899923324585,
+        1.6987899541854858
+      ],
+      "marker_abs_max_m": 0.8780204653739929,
+      "q_abs_max_rad": 1.7472418546676636,
+      "dq_abs_max_rad_s": 0.9021598100662231
+    },
+    {
+      "case_index": 8,
+      "case_name": "mid_trajectory_burst",
+      "description": "Most excitation is concentrated in the middle of the trajectory.",
+      "file": "D:\\FLARE\\test files\\panda\\panda_extrapolation_10\\test\\panda_extrapolation_traj_008.npy",
+      "u_min": [
+        -0.28798386454582214,
+        -0.22399979829788208,
+        -1.8587805032730103,
+        1.3148024082183838
+      ],
+      "u_max": [
+        0.2879753112792969,
+        0.22393663227558136,
+        -1.28279447555542,
+        1.8267704248428345
+      ],
+      "marker_abs_max_m": 0.8609746694564819,
+      "q_abs_max_rad": 1.8453683853149414,
+      "dq_abs_max_rad_s": 1.0507452487945557
+    },
+    {
+      "case_index": 9,
+      "case_name": "offset_hold",
+      "description": "Joints spend more time away from home while staying inside safe limits.",
+      "file": "D:\\FLARE\\test files\\panda\\panda_extrapolation_10\\test\\panda_extrapolation_traj_009.npy",
+      "u_min": [
+        -0.21599985659122467,
+        -0.15399475395679474,
+        -1.7417885065078735,
+        1.4107913970947266
+      ],
+      "u_max": [
+        0.29249870777130127,
+        0.17499710619449615,
+        -1.3367938995361328,
+        1.746789813041687
+      ],
+      "marker_abs_max_m": 0.9134602546691895,
+      "q_abs_max_rad": 1.7465908527374268,
+      "dq_abs_max_rad_s": 0.5872963666915894
+    }
+  ]
+}

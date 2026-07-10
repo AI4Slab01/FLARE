@@ -1,0 +1,188 @@
+{
+  "train_dir": "/data/home/zhuyibjut/aeleap/pend11/train",
+  "var_dir": "/data/home/zhuyibjut/aeleap/pend11/var",
+  "test_dir": "/data/home/zhuyibjut/aeleap/pend11/test",
+  "sensor_names": [
+    "x1",
+    "x2",
+    "x3",
+    "x4",
+    "x5",
+    "x6",
+    "x7",
+    "x8",
+    "x9",
+    "x10",
+    "x11",
+    "x12",
+    "x13",
+    "x14",
+    "x15",
+    "x16",
+    "x17",
+    "x18",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x23",
+    "x24",
+    "x25",
+    "x26",
+    "x27",
+    "x28",
+    "x29",
+    "x30",
+    "x31",
+    "x32",
+    "x33",
+    "x34",
+    "x35",
+    "x36",
+    "x37",
+    "x38",
+    "x39",
+    "x40",
+    "x41",
+    "x42",
+    "x43",
+    "x44",
+    "x45",
+    "x46",
+    "x47",
+    "x48",
+    "x49",
+    "x50",
+    "x51",
+    "x52",
+    "x53",
+    "x54",
+    "x55",
+    "x56",
+    "x57",
+    "x58",
+    "x59",
+    "x60",
+    "x61",
+    "x62",
+    "x63",
+    "x64"
+  ],
+  "num_sensors": 64,
+  "forcing_dim": 1,
+  "forcing_key": "f",
+  "forcing_names": "f",
+  "window_length": 3,
+  "sequence_split_segments": 10,
+  "normalize_x": false,
+  "normalize_forcing": false,
+  "latent_dim": 1,
+  "pre_pca_latent_dim": 1,
+  "intrinsic_dim_method": "levina_bickel",
+  "intrinsic_dim_k": 10,
+  "intrinsic_dim_max_points": 5000,
+  "intrinsic_dim_divide_by_model_order": true,
+  "model_order": 2,
+  "poly_order": 2,
+  "include_sine": true,
+  "include_constant": true,
+  "forcing_mixed_terms": false,
+  "activation": "elu",
+  "encoder_widths": [
+    128,
+    64,
+    32
+  ],
+  "decoder_widths": [
+    32,
+    64,
+    128
+  ],
+  "coefficient_initialization": "constant",
+  "coefficient_scale": 0.0,
+  "sequential_thresholding": true,
+  "coefficient_threshold": 0.1,
+  "threshold_frequency": 100,
+  "loss_weight_decoder": 1.0,
+  "loss_weight_rollout": 0.01,
+  "loss_weight_latent_rollout": 0.001,
+  "loss_weight_sindy": 0.0001,
+  "loss_weight_sindy_regularization": 1e-05,
+  "pretrain_part1_epochs": 201,
+  "pretrain_part2_epochs": 201,
+  "pretrain_learning_rate": 0.001,
+  "posttrain_joint_epochs": 501,
+  "posttrain_joint_learning_rate": 0.0001,
+  "posttrain_batch_size": 8,
+  "posttrain_start_from": "last_safe",
+  "posttrain_rollout_start_stride": null,
+  "batch_size": 8,
+  "eval_batch_size": 1,
+  "learning_rate": 0.0005,
+  "sindy_learning_rate": 0.0005,
+  "max_epochs": 4501,
+  "max_grad_norm": 1.0,
+  "rollout_substeps": 1,
+  "sindy_rhs_clip": 20.0,
+  "rollout_state_clip": 20.0,
+  "check_finite": true,
+  "num_workers": 0,
+  "collapse_guard_enabled": true,
+  "collapse_guard_dec_increase": 3.0,
+  "collapse_guard_rollout_increase": 3.0,
+  "collapse_guard_sindy_increase": 3.0,
+  "collapse_guard_lr_decay": 0.5,
+  "collapse_guard_max_consecutive": 3,
+  "print_progress": true,
+  "print_frequency": 20,
+  "device": "cuda",
+  "output_dir": "/data/home/zhuyibjut/aeleap/pend11/outputs",
+  "save_name": "tabular_window_sindy_2026_06_07_20_08_05",
+  "library_input_dim": 3,
+  "library_dim": 9,
+  "coefficient_mask": [
+    [
+      1.0
+    ],
+    [
+      1.0
+    ],
+    [
+      1.0
+    ],
+    [
+      1.0
+    ],
+    [
+      1.0
+    ],
+    [
+      1.0
+    ],
+    [
+      1.0
+    ],
+    [
+      1.0
+    ],
+    [
+      1.0
+    ]
+  ],
+  "pca_selected_dim": 1,
+  "latent_dim_selection_mode": "fixed",
+  "pca_mean": [
+    0.0
+  ],
+  "pca_components": [
+    [
+      1.0
+    ]
+  ],
+  "pca_explained_variance_ratio": [
+    1.0
+  ],
+  "pca_cumulative_explained_variance": [
+    1.0
+  ]
+}

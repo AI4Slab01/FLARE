@@ -1,0 +1,99 @@
+{
+  "checkpoint": "outputs/tabular_window_sindy_2026_06_22_22_48_51_best.pt",
+  "test_dir": "test10",
+  "model_order": 1,
+  "latent_dim": 4,
+  "pca_selected_dim": 4,
+  "pre_pca_latent_dim": 16,
+  "pca_variance_threshold": 0.95,
+  "poly_order": 1,
+  "window_length": 5,
+  "start_index": 0,
+  "normalize_x": true,
+  "normalize_forcing": true,
+  "initial_condition_mode": "encoder",
+  "mean_masked_mse": 0.012235603714361786,
+  "mean_masked_rmse": 0.1071485498096129,
+  "files": [
+    {
+      "file_name": "sheet_extrapolation_000.npy",
+      "num_steps": 500,
+      "dt": 0.40000152587890625,
+      "start_index": 0,
+      "masked_mse": 0.012905591167509556,
+      "masked_rmse": 0.11360277799204364
+    },
+    {
+      "file_name": "sheet_extrapolation_001.npy",
+      "num_steps": 500,
+      "dt": 0.40000152587890625,
+      "start_index": 0,
+      "masked_mse": 0.00558466324582696,
+      "masked_rmse": 0.07473060447920223
+    },
+    {
+      "file_name": "sheet_extrapolation_002.npy",
+      "num_steps": 500,
+      "dt": 0.40000152587890625,
+      "start_index": 0,
+      "masked_mse": 0.010237236507236958,
+      "masked_rmse": 0.10117922962365822
+    },
+    {
+      "file_name": "sheet_extrapolation_003.npy",
+      "num_steps": 500,
+      "dt": 0.40000152587890625,
+      "start_index": 0,
+      "masked_mse": 0.006719744764268398,
+      "masked_rmse": 0.0819740493343375
+    },
+    {
+      "file_name": "sheet_extrapolation_004.npy",
+      "num_steps": 500,
+      "dt": 0.40000152587890625,
+      "start_index": 0,
+      "masked_mse": 0.012061290442943573,
+      "masked_rmse": 0.10982390651831492
+    },
+    {
+      "file_name": "sheet_extrapolation_005.npy",
+      "num_steps": 500,
+      "dt": 0.40000152587890625,
+      "start_index": 0,
+      "masked_mse": 0.008346022106707096,
+      "masked_rmse": 0.09135656575587273
+    },
+    {
+      "file_name": "sheet_extrapolation_006.npy",
+      "num_steps": 500,
+      "dt": 0.40000152587890625,
+      "start_index": 0,
+      "masked_mse": 0.013217517174780369,
+      "masked_rmse": 0.11496746137399211
+    },
+    {
+      "file_name": "sheet_extrapolation_007.npy",
+      "num_steps": 500,
+      "dt": 0.40000152587890625,
+      "start_index": 0,
+      "masked_mse": 0.010026841424405575,
+      "masked_rmse": 0.1001341171849314
+    },
+    {
+      "file_name": "sheet_extrapolation_008.npy",
+      "num_steps": 500,
+      "dt": 0.40000152587890625,
+      "start_index": 0,
+      "masked_mse": 0.010622834786772728,
+      "masked_rmse": 0.10306713727843966
+    },
+    {
+      "file_name": "sheet_extrapolation_009.npy",
+      "num_steps": 500,
+      "dt": 0.40000152587890625,
+      "start_index": 0,
+      "masked_mse": 0.032634295523166656,
+      "masked_rmse": 0.1806496485553367
+    }
+  ]
+}

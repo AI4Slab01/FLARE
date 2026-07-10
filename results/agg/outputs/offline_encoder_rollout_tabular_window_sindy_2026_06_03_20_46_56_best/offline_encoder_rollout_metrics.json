@@ -1,0 +1,99 @@
+{
+  "checkpoint": "outputs/tabular_window_sindy_2026_06_03_20_46_56_best.pt",
+  "test_dir": "test",
+  "model_order": 1,
+  "latent_dim": 6,
+  "pca_selected_dim": 6,
+  "pre_pca_latent_dim": 16,
+  "pca_variance_threshold": NaN,
+  "poly_order": 2,
+  "window_length": 5,
+  "start_index": 0,
+  "normalize_x": true,
+  "normalize_forcing": true,
+  "initial_condition_mode": "encoder",
+  "mean_masked_mse": 1.2708048746645773e-08,
+  "mean_masked_rmse": 0.0001103885833483888,
+  "files": [
+    {
+      "file_name": "boucwen_test_000.npy",
+      "num_steps": 500,
+      "dt": 0.019999980926513672,
+      "start_index": 0,
+      "masked_mse": 8.429453579594792e-09,
+      "masked_rmse": 9.18120557421235e-05
+    },
+    {
+      "file_name": "boucwen_test_001.npy",
+      "num_steps": 500,
+      "dt": 0.019999980926513672,
+      "start_index": 0,
+      "masked_mse": 2.6273905717744128e-08,
+      "masked_rmse": 0.00016209227531793156
+    },
+    {
+      "file_name": "boucwen_test_002.npy",
+      "num_steps": 500,
+      "dt": 0.019999980926513672,
+      "start_index": 0,
+      "masked_mse": 8.845317367445205e-09,
+      "masked_rmse": 9.404954740691315e-05
+    },
+    {
+      "file_name": "boucwen_test_003.npy",
+      "num_steps": 500,
+      "dt": 0.019999980926513672,
+      "start_index": 0,
+      "masked_mse": 6.85557388635516e-09,
+      "masked_rmse": 8.27983930179515e-05
+    },
+    {
+      "file_name": "boucwen_test_004.npy",
+      "num_steps": 500,
+      "dt": 0.019999980926513672,
+      "start_index": 0,
+      "masked_mse": 9.239919940284835e-09,
+      "masked_rmse": 9.612450228887968e-05
+    },
+    {
+      "file_name": "boucwen_test_005.npy",
+      "num_steps": 500,
+      "dt": 0.019999980926513672,
+      "start_index": 0,
+      "masked_mse": 1.0482497536656865e-08,
+      "masked_rmse": 0.00010238406876392862
+    },
+    {
+      "file_name": "boucwen_test_006.npy",
+      "num_steps": 500,
+      "dt": 0.019999980926513672,
+      "start_index": 0,
+      "masked_mse": 1.768476920460671e-08,
+      "masked_rmse": 0.00013298409380300605
+    },
+    {
+      "file_name": "boucwen_test_007.npy",
+      "num_steps": 500,
+      "dt": 0.019999980926513672,
+      "start_index": 0,
+      "masked_mse": 1.6227776455934873e-08,
+      "masked_rmse": 0.0001273882901052325
+    },
+    {
+      "file_name": "boucwen_test_008.npy",
+      "num_steps": 500,
+      "dt": 0.019999980926513672,
+      "start_index": 0,
+      "masked_mse": 1.2951356431756267e-08,
+      "masked_rmse": 0.00011380402643033447
+    },
+    {
+      "file_name": "boucwen_test_009.npy",
+      "num_steps": 500,
+      "dt": 0.019999980926513672,
+      "start_index": 0,
+      "masked_mse": 1.0089917346078892e-08,
+      "masked_rmse": 0.00010044858060758694
+    }
+  ]
+}

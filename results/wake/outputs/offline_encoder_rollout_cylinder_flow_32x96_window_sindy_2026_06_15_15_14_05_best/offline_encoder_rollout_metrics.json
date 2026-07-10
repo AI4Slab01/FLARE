@@ -1,0 +1,99 @@
+{
+  "checkpoint": "outputs/cylinder_flow_32x96_window_sindy_2026_06_15_15_14_05_best.pt",
+  "test_dir": "test",
+  "model_order": 1,
+  "latent_dim": 4,
+  "pca_selected_dim": 4,
+  "pre_pca_latent_dim": 12,
+  "pca_variance_threshold": 0.8,
+  "poly_order": 3,
+  "window_length": 3,
+  "start_index": 3,
+  "normalize_x": true,
+  "normalize_forcing": true,
+  "initial_condition_mode": "encoder",
+  "mean_masked_mse": 0.0032900953607168048,
+  "mean_masked_rmse": 0.05521329195781227,
+  "files": [
+    {
+      "file_name": "osc_cylinder_001.npy",
+      "num_steps": 497,
+      "dt": 4.0,
+      "start_index": 3,
+      "masked_mse": 0.0007481627981178463,
+      "masked_rmse": 0.02735256474478849
+    },
+    {
+      "file_name": "osc_cylinder_002.npy",
+      "num_steps": 497,
+      "dt": 4.0,
+      "start_index": 3,
+      "masked_mse": 0.002421001438051462,
+      "masked_rmse": 0.04920367301382553
+    },
+    {
+      "file_name": "osc_cylinder_003.npy",
+      "num_steps": 497,
+      "dt": 4.0,
+      "start_index": 3,
+      "masked_mse": 0.0020362718496471643,
+      "masked_rmse": 0.045125068971107005
+    },
+    {
+      "file_name": "osc_cylinder_004.npy",
+      "num_steps": 497,
+      "dt": 4.0,
+      "start_index": 3,
+      "masked_mse": 0.0029976447112858295,
+      "masked_rmse": 0.05475075078285073
+    },
+    {
+      "file_name": "osc_cylinder_005.npy",
+      "num_steps": 497,
+      "dt": 4.0,
+      "start_index": 3,
+      "masked_mse": 0.002073788084089756,
+      "masked_rmse": 0.045538863447496754
+    },
+    {
+      "file_name": "osc_cylinder_006.npy",
+      "num_steps": 497,
+      "dt": 4.0,
+      "start_index": 3,
+      "masked_mse": 0.004151408094912767,
+      "masked_rmse": 0.06443142164280381
+    },
+    {
+      "file_name": "osc_cylinder_007.npy",
+      "num_steps": 497,
+      "dt": 4.0,
+      "start_index": 3,
+      "masked_mse": 0.007653239648789167,
+      "masked_rmse": 0.08748279630183964
+    },
+    {
+      "file_name": "osc_cylinder_008.npy",
+      "num_steps": 497,
+      "dt": 4.0,
+      "start_index": 3,
+      "masked_mse": 0.004979507997632027,
+      "masked_rmse": 0.07056562901039022
+    },
+    {
+      "file_name": "osc_cylinder_009.npy",
+      "num_steps": 497,
+      "dt": 4.0,
+      "start_index": 3,
+      "masked_mse": 0.0024252936709672213,
+      "masked_rmse": 0.04924727069561542
+    },
+    {
+      "file_name": "osc_cylinder_010.npy",
+      "num_steps": 497,
+      "dt": 4.0,
+      "start_index": 3,
+      "masked_mse": 0.0034146353136748075,
+      "masked_rmse": 0.058434880967405144
+    }
+  ]
+}

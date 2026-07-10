@@ -1,0 +1,99 @@
+{
+  "checkpoint": "outputs/duffing_video_sindy_2026_06_10_16_46_25_best.pt",
+  "test_dir": "test",
+  "model_order": 2,
+  "latent_dim": 1,
+  "pca_selected_dim": 1,
+  "pre_pca_latent_dim": 5,
+  "pca_variance_threshold": NaN,
+  "poly_order": 3,
+  "window_length": 3,
+  "start_index": 0,
+  "normalize_x": false,
+  "normalize_forcing": false,
+  "initial_condition_mode": "encoder",
+  "mean_masked_mse": 0.0004461382670342573,
+  "mean_masked_rmse": 0.01822513464173494,
+  "files": [
+    {
+      "file_name": "vdp_001.npy",
+      "num_steps": 400,
+      "dt": 0.100250244140625,
+      "start_index": 0,
+      "masked_mse": 0.0004300560394767672,
+      "masked_rmse": 0.02073779254107744
+    },
+    {
+      "file_name": "vdp_002.npy",
+      "num_steps": 400,
+      "dt": 0.100250244140625,
+      "start_index": 0,
+      "masked_mse": 6.686746201012284e-05,
+      "masked_rmse": 0.008177252717760583
+    },
+    {
+      "file_name": "vdp_003.npy",
+      "num_steps": 400,
+      "dt": 0.100250244140625,
+      "start_index": 0,
+      "masked_mse": 0.00037698730011470616,
+      "masked_rmse": 0.019416160797508505
+    },
+    {
+      "file_name": "vdp_004.npy",
+      "num_steps": 400,
+      "dt": 0.100250244140625,
+      "start_index": 0,
+      "masked_mse": 0.001498173805885017,
+      "masked_rmse": 0.038706250217310084
+    },
+    {
+      "file_name": "vdp_005.npy",
+      "num_steps": 400,
+      "dt": 0.100250244140625,
+      "start_index": 0,
+      "masked_mse": 2.7884760129381903e-05,
+      "masked_rmse": 0.005280602250632205
+    },
+    {
+      "file_name": "vdp_006.npy",
+      "num_steps": 400,
+      "dt": 0.100250244140625,
+      "start_index": 0,
+      "masked_mse": 3.774270589929074e-05,
+      "masked_rmse": 0.0061435092495487256
+    },
+    {
+      "file_name": "vdp_007.npy",
+      "num_steps": 400,
+      "dt": 0.100250244140625,
+      "start_index": 0,
+      "masked_mse": 0.0002377640485065058,
+      "masked_rmse": 0.015419599492415677
+    },
+    {
+      "file_name": "vdp_008.npy",
+      "num_steps": 400,
+      "dt": 0.100250244140625,
+      "start_index": 0,
+      "masked_mse": 0.00066052918555215,
+      "masked_rmse": 0.02570076235352076
+    },
+    {
+      "file_name": "vdp_009.npy",
+      "num_steps": 400,
+      "dt": 0.100250244140625,
+      "start_index": 0,
+      "masked_mse": 0.0010051334975287318,
+      "masked_rmse": 0.031703840422395706
+    },
+    {
+      "file_name": "vdp_010.npy",
+      "num_steps": 400,
+      "dt": 0.100250244140625,
+      "start_index": 0,
+      "masked_mse": 0.0001202438652398996,
+      "masked_rmse": 0.01096557637517972
+    }
+  ]
+}

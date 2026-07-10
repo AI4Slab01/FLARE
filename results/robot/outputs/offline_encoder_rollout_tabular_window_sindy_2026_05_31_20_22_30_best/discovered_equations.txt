@@ -1,0 +1,13 @@
+Discovered latent SINDy equations
+model_order: 2
+latent_dim: 4
+pca_selected_dim: 4
+feature variables: ['z1', 'z2', 'z3', 'z4', 'dz1', 'dz2', 'dz3', 'dz4', 'qdes_joint1', 'qdes_joint2', 'qdes_joint4', 'qdes_joint6']
+normalize_forcing: True
+forcing_mixed_terms: False
+Note: if normalize_forcing=True, forcing terms use the train-set normalized forcing coordinate.
+
+ddz1 = 7.1311436*1 - 11.212864*z1 + 5.5898862*z2 + 5.9880695*z3 - 3.66276*dz1 - 16.230455*z1*z1 - 14.648517*z1*z2 - 13.646545*z1*z3 - 1.3267156*z1*dz1 + 3.075561*z2*z2 + 3.3396981*z2*z3 + 3.9734018*z3*z3 - 1.2950542*z3*dz1 + 10.376334*qdes_joint1 - 10.051895*qdes_joint2
+ddz2 = 7.6775661*z1 - 6.5443597*z2 + 2.1956322*dz1 - 4.7258124*dz2 + 5.9560318*z1*z1 + 7.6878395*z1*z3 + 1.5783992*z1*z4 - 14.440775*z2*z2 - 6.6953506*z2*z3 + 5.3429279*z3*z3 - 4.5207391*qdes_joint1 + 7.1675224*qdes_joint2 - 6.9706864*qdes_joint4
+ddz3 = 6.0544925*1 + 6.5140171*z1 + 6.6190886*z2 - 1.9733725*z3 + 1.6662877*dz1 + 2.1849375*dz2 - 1.6796172*dz3 + 3.9728045*z1*z1 + 6.5052681*z1*z2 - 1.6786863*z1*z3 + 5.2138581*z2*z2 - 0.90486616*z2*z3 - 8.5926781*z3*z3 - 3.0370309*qdes_joint1 + 1.2133325*qdes_joint2 + 4.908884*qdes_joint4
+ddz4 = -23.15715*z4 - 5.5877223*dz4 - 13.829097*z1*z4 - 21.67816*z2*z4 - 1.3423705*z2*dz4 - 23.238317*z3*z4 - 0.84081769*z3*dz4 - 2.9331441*z4*z4 - 12.61815*qdes_joint1 - 12.201804*qdes_joint2

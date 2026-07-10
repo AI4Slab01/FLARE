@@ -1,0 +1,506 @@
+Training log will be saved to: /data/home/zhuyibjut/aeleap/beam9/outputs/duffing_video_sindy_2026_06_12_10_28_39_train_log.txt
+Using device: cuda
+Window-state encoder length: 3
+Pretrain part 1: epochs=201, lr=0.001, pre_pca_latent_dim=8
+Intrinsic-dimension selection: method=twonn, pca_variance_threshold=0.99, k=10, max_points=5000, divide_by_model_order=True
+Pretrain part 2: epochs=201, lr=0.001, latent_dim_after_selection=auto-selected
+Formal training learning rates: base=0.0003, sindy=0.0003
+Formal training uses the window-state encoder for rollout initialization; no separate initial-condition network loss is used.
+Decoder-only posttraining: epochs=501, lr=0.0001
+Posttraining freezes encoder and SINDy; fixed SINDy rollout z(t) is cached from encoder-initialized segment starts, then decoder only is trained.
+PRETRAINING PART 1 ENCODER-DECODER BEFORE DIMENSION SELECTION
+PRETRAINING PART 1 ENCODER-DECODER BEFORE DIMENSION SELECTION Epoch 0
+   train dec=0.00753
+   valid dec=0.00169
+PRETRAINING PART 1 ENCODER-DECODER BEFORE DIMENSION SELECTION Epoch 20
+   train dec=0.00003
+   valid dec=0.00004
+PRETRAINING PART 1 ENCODER-DECODER BEFORE DIMENSION SELECTION Epoch 40
+   train dec=0.00002
+   valid dec=0.00002
+PRETRAINING PART 1 ENCODER-DECODER BEFORE DIMENSION SELECTION Epoch 60
+   train dec=0.00006
+   valid dec=0.00006
+PRETRAINING PART 1 ENCODER-DECODER BEFORE DIMENSION SELECTION Epoch 80
+   train dec=0.00008
+   valid dec=0.00019
+PRETRAINING PART 1 ENCODER-DECODER BEFORE DIMENSION SELECTION Epoch 100
+   train dec=0.00002
+   valid dec=0.00002
+PRETRAINING PART 1 ENCODER-DECODER BEFORE DIMENSION SELECTION Epoch 120
+   train dec=0.00001
+   valid dec=0.00001
+PRETRAINING PART 1 ENCODER-DECODER BEFORE DIMENSION SELECTION Epoch 140
+   train dec=0.00000
+   valid dec=0.00000
+PRETRAINING PART 1 ENCODER-DECODER BEFORE DIMENSION SELECTION Epoch 160
+   train dec=0.00001
+   valid dec=0.00001
+PRETRAINING PART 1 ENCODER-DECODER BEFORE DIMENSION SELECTION Epoch 180
+   train dec=0.00004
+   valid dec=0.00006
+PRETRAINING PART 1 ENCODER-DECODER BEFORE DIMENSION SELECTION Epoch 200
+   train dec=0.00003
+   valid dec=0.00001
+ESTIMATING INTRINSIC DIMENSION ON PART-1 ENCODER LATENTS
+Intrinsic dimension selected latent_dim=2 from pre_pca_latent_dim=8 using method=twonn; raw=4.0621, divisor=2.00, adjusted=2.0311.
+PRETRAINING PART 2 ENCODER-DECODER AFTER DIMENSION SELECTION
+PRETRAINING PART 2 ENCODER-DECODER AFTER DIMENSION SELECTION Epoch 0
+   train dec=0.00915
+   valid dec=0.00500
+PRETRAINING PART 2 ENCODER-DECODER AFTER DIMENSION SELECTION Epoch 20
+   train dec=0.00015
+   valid dec=0.00023
+PRETRAINING PART 2 ENCODER-DECODER AFTER DIMENSION SELECTION Epoch 40
+   train dec=0.00010
+   valid dec=0.00004
+PRETRAINING PART 2 ENCODER-DECODER AFTER DIMENSION SELECTION Epoch 60
+   train dec=0.00002
+   valid dec=0.00002
+PRETRAINING PART 2 ENCODER-DECODER AFTER DIMENSION SELECTION Epoch 80
+   train dec=0.00005
+   valid dec=0.00002
+PRETRAINING PART 2 ENCODER-DECODER AFTER DIMENSION SELECTION Epoch 100
+   train dec=0.00007
+   valid dec=0.00012
+PRETRAINING PART 2 ENCODER-DECODER AFTER DIMENSION SELECTION Epoch 120
+   train dec=0.00001
+   valid dec=0.00001
+PRETRAINING PART 2 ENCODER-DECODER AFTER DIMENSION SELECTION Epoch 140
+   train dec=0.00001
+   valid dec=0.00001
+PRETRAINING PART 2 ENCODER-DECODER AFTER DIMENSION SELECTION Epoch 160
+   train dec=0.00001
+   valid dec=0.00001
+PRETRAINING PART 2 ENCODER-DECODER AFTER DIMENSION SELECTION Epoch 180
+   train dec=0.00001
+   valid dec=0.00001
+PRETRAINING PART 2 ENCODER-DECODER AFTER DIMENSION SELECTION Epoch 200
+   train dec=0.00004
+   valid dec=0.00001
+FORMAL TRAINING WITH WINDOW-STATE ENCODER INITIALIZATION
+Formal collapse guard: enabled=True, dec_ratio>=3.0, rollout_ratio>=3.0, sindy_ratio>=3.0, lr_decay=0.5, max_consecutive=3
+Epoch 0
+   train total=174.33440, dec=0.00308, rollout=0.02013, z_rollout=786.63791, sindy=1735444.83133, sparse=0.00404
+   valid total=60.87372, dec=0.00976, rollout=0.02361, z_rollout=293.70995, sindy=605700.25003, sparse=0.00648
+Epoch 20
+   train total=0.00304, dec=0.00262, rollout=0.01654, z_rollout=0.06805, sindy=1.84812, sparse=0.12803
+   valid total=0.00226, dec=0.00196, rollout=0.01247, z_rollout=0.05722, sindy=1.17097, sparse=0.13045
+Epoch 40
+   train total=0.00077, dec=0.00049, rollout=0.01291, z_rollout=0.03248, sindy=1.11865, sparse=0.21847
+   valid total=0.00047, dec=0.00028, rollout=0.01057, z_rollout=0.02022, sindy=0.63260, sparse=0.22025
+Epoch 60
+   train total=0.00060, dec=0.00036, rollout=0.01173, z_rollout=0.02402, sindy=0.92352, sparse=0.30446
+   valid total=0.00089, dec=0.00072, rollout=0.00958, z_rollout=0.01644, sindy=0.54832, sparse=0.30726
+Epoch 80
+   train total=0.00143, dec=0.00121, rollout=0.01089, z_rollout=0.01941, sindy=0.86652, sparse=0.41322
+   valid total=0.00445, dec=0.00425, rollout=0.00924, z_rollout=0.01948, sindy=0.76988, sparse=0.41514
+Epoch 100
+   train total=0.00053, dec=0.00032, rollout=0.01028, z_rollout=0.01793, sindy=0.81440, sparse=0.49611
+   valid total=0.00028, dec=0.00013, rollout=0.00840, z_rollout=0.01275, sindy=0.50389, sparse=0.49744
+Epoch 120
+   train total=0.00109, dec=0.00090, rollout=0.00989, z_rollout=0.01579, sindy=0.75348, sparse=0.59360
+   valid total=0.00026, dec=0.00011, rollout=0.00808, z_rollout=0.01203, sindy=0.49372, sparse=0.59624
+Epoch 140
+   train total=0.00029, dec=0.00011, rollout=0.00962, z_rollout=0.01298, sindy=0.66379, sparse=0.69108
+   valid total=0.00019, dec=0.00006, rollout=0.00777, z_rollout=0.00848, sindy=0.39432, sparse=0.69322
+Epoch 160
+   train total=0.00044, dec=0.00027, rollout=0.00942, z_rollout=0.01256, sindy=0.60053, sparse=0.79680
+   valid total=0.00020, dec=0.00007, rollout=0.00766, z_rollout=0.00863, sindy=0.34985, sparse=0.79972
+Epoch 180
+   train total=0.00027, dec=0.00011, rollout=0.00908, z_rollout=0.01097, sindy=0.51431, sparse=0.92709
+   valid total=0.00019, dec=0.00007, rollout=0.00745, z_rollout=0.00754, sindy=0.30721, sparse=0.93097
+THRESHOLDING epoch 200: 9 active coefficients, 1 newly pruned
+   Threshold epoch 200: collapse guard skipped; pruning is kept and this epoch is accepted.
+Epoch 200
+   train total=0.00030, dec=0.00006, rollout=0.01180, z_rollout=0.03281, sindy=0.73020, sparse=1.03289
+   valid total=0.00024, dec=0.00008, rollout=0.00805, z_rollout=0.02312, sindy=0.44928, sparse=1.03467
+Epoch 220
+   train total=0.00034, dec=0.00018, rollout=0.00853, z_rollout=0.01022, sindy=0.54520, sparse=1.11014
+   valid total=0.00055, dec=0.00044, rollout=0.00699, z_rollout=0.00631, sindy=0.28044, sparse=1.11285
+Epoch 240
+   train total=0.00020, dec=0.00006, rollout=0.00777, z_rollout=0.00760, sindy=0.38493, sparse=1.25205
+   valid total=0.00024, dec=0.00014, rollout=0.00629, z_rollout=0.00510, sindy=0.22731, sparse=1.25630
+Epoch 260
+   train total=0.00016, dec=0.00005, rollout=0.00640, z_rollout=0.00559, sindy=0.22389, sparse=1.44572
+   valid total=0.00012, dec=0.00004, rollout=0.00517, z_rollout=0.00410, sindy=0.12494, sparse=1.45116
+Epoch 280
+   train total=0.00014, dec=0.00006, rollout=0.00471, z_rollout=0.00435, sindy=0.14602, sparse=1.63337
+   valid total=0.00011, dec=0.00004, rollout=0.00393, z_rollout=0.00327, sindy=0.08892, sparse=1.63790
+Epoch 300
+   train total=0.00014, dec=0.00007, rollout=0.00388, z_rollout=0.00344, sindy=0.12128, sparse=1.76957
+   valid total=0.00014, dec=0.00008, rollout=0.00332, z_rollout=0.00273, sindy=0.07156, sparse=1.77224
+Epoch 320
+   train total=0.00012, dec=0.00005, rollout=0.00340, z_rollout=0.00263, sindy=0.09886, sparse=1.87630
+   valid total=0.00010, dec=0.00004, rollout=0.00303, z_rollout=0.00223, sindy=0.06742, sparse=1.87916
+Epoch 340
+   train total=0.00009, dec=0.00003, rollout=0.00301, z_rollout=0.00218, sindy=0.09178, sparse=1.98226
+   valid total=0.00008, dec=0.00002, rollout=0.00258, z_rollout=0.00174, sindy=0.06180, sparse=1.98538
+COLLAPSE DETECTED at formal epoch 346: dec x100, rollout x3.29, sindy x18.1; valid dec=0.00264, rollout=0.00868, sindy=1.38243; last_safe epoch=345; consecutive=1/3
+   Rejected epoch 346; restored last_safe and reduced formal learning rates to [0.00015, 0.00015]
+Epoch 360
+   train total=0.00027, dec=0.00014, rollout=0.00343, z_rollout=0.00313, sindy=0.69866, sparse=2.05337
+   valid total=0.00031, dec=0.00017, rollout=0.00315, z_rollout=0.00258, sindy=0.84734, sparse=2.05508
+Epoch 380
+   train total=0.00012, dec=0.00005, rollout=0.00281, z_rollout=0.00170, sindy=0.18970, sparse=2.11965
+   valid total=0.00012, dec=0.00007, rollout=0.00238, z_rollout=0.00133, sindy=0.08597, sparse=2.12125
+THRESHOLDING epoch 400: 8 active coefficients, 1 newly pruned
+   Threshold epoch 400: collapse guard skipped; pruning is kept and this epoch is accepted.
+Epoch 400
+   train total=0.00009, dec=0.00003, rollout=0.00247, z_rollout=0.00137, sindy=0.09372, sparse=2.18065
+   valid total=0.00007, dec=0.00002, rollout=0.00210, z_rollout=0.00107, sindy=0.06030, sparse=2.18222
+Epoch 420
+   train total=0.00011, dec=0.00006, rollout=0.00218, z_rollout=0.00105, sindy=0.07800, sparse=2.23335
+   valid total=0.00012, dec=0.00007, rollout=0.00185, z_rollout=0.00085, sindy=0.05390, sparse=2.23462
+Epoch 440
+   train total=0.00008, dec=0.00003, rollout=0.00201, z_rollout=0.00095, sindy=0.07357, sparse=2.28468
+   valid total=0.00007, dec=0.00003, rollout=0.00171, z_rollout=0.00078, sindy=0.04857, sparse=2.28573
+Epoch 460
+   train total=0.00008, dec=0.00002, rollout=0.00193, z_rollout=0.00093, sindy=0.07404, sparse=2.33561
+   valid total=0.00006, dec=0.00002, rollout=0.00163, z_rollout=0.00076, sindy=0.05143, sparse=2.33691
+Epoch 480
+   train total=0.00008, dec=0.00003, rollout=0.00178, z_rollout=0.00082, sindy=0.06433, sparse=2.38138
+   valid total=0.00006, dec=0.00002, rollout=0.00152, z_rollout=0.00068, sindy=0.04869, sparse=2.38234
+Epoch 500
+   train total=0.00008, dec=0.00003, rollout=0.00168, z_rollout=0.00076, sindy=0.06059, sparse=2.42649
+   valid total=0.00007, dec=0.00003, rollout=0.00144, z_rollout=0.00064, sindy=0.04361, sparse=2.42750
+Epoch 520
+   train total=0.00007, dec=0.00002, rollout=0.00175, z_rollout=0.00086, sindy=0.07397, sparse=2.47092
+   valid total=0.00006, dec=0.00002, rollout=0.00147, z_rollout=0.00069, sindy=0.04922, sparse=2.47203
+Epoch 540
+   train total=0.00007, dec=0.00003, rollout=0.00153, z_rollout=0.00069, sindy=0.05356, sparse=2.50822
+   valid total=0.00006, dec=0.00002, rollout=0.00132, z_rollout=0.00057, sindy=0.04028, sparse=2.50895
+Epoch 560
+   train total=0.00007, dec=0.00002, rollout=0.00150, z_rollout=0.00069, sindy=0.05544, sparse=2.55000
+   valid total=0.00006, dec=0.00002, rollout=0.00127, z_rollout=0.00057, sindy=0.03781, sparse=2.55071
+Epoch 580
+   train total=0.00009, dec=0.00005, rollout=0.00140, z_rollout=0.00062, sindy=0.05071, sparse=2.58423
+   valid total=0.00006, dec=0.00002, rollout=0.00120, z_rollout=0.00054, sindy=0.03859, sparse=2.58497
+THRESHOLDING epoch 600: 8 active coefficients, 0 newly pruned
+   Threshold epoch 600: collapse guard skipped; pruning is kept and this epoch is accepted.
+Epoch 600
+   train total=0.00008, dec=0.00004, rollout=0.00133, z_rollout=0.00059, sindy=0.05125, sparse=2.61849
+   valid total=0.00006, dec=0.00002, rollout=0.00113, z_rollout=0.00050, sindy=0.04171, sparse=2.61909
+Epoch 620
+   train total=0.00007, dec=0.00002, rollout=0.00127, z_rollout=0.00057, sindy=0.04825, sparse=2.65133
+   valid total=0.00006, dec=0.00002, rollout=0.00110, z_rollout=0.00047, sindy=0.03929, sparse=2.65205
+Epoch 640
+   train total=0.00010, dec=0.00006, rollout=0.00128, z_rollout=0.00055, sindy=0.05843, sparse=2.67818
+   valid total=0.00006, dec=0.00002, rollout=0.00105, z_rollout=0.00045, sindy=0.03563, sparse=2.67920
+Epoch 660
+   train total=0.00006, dec=0.00002, rollout=0.00116, z_rollout=0.00050, sindy=0.04157, sparse=2.70759
+   valid total=0.00006, dec=0.00001, rollout=0.00100, z_rollout=0.00042, sindy=0.03319, sparse=2.70844
+Epoch 680
+   train total=0.00007, dec=0.00003, rollout=0.00111, z_rollout=0.00047, sindy=0.04056, sparse=2.73356
+   valid total=0.00006, dec=0.00002, rollout=0.00095, z_rollout=0.00039, sindy=0.03016, sparse=2.73390
+Epoch 700
+   train total=0.00008, dec=0.00004, rollout=0.00105, z_rollout=0.00044, sindy=0.03861, sparse=2.75622
+   valid total=0.00028, dec=0.00024, rollout=0.00095, z_rollout=0.00039, sindy=0.03240, sparse=2.75652
+Epoch 720
+   train total=0.00018, dec=0.00013, rollout=0.00114, z_rollout=0.00046, sindy=0.05234, sparse=2.77862
+   valid total=0.00008, dec=0.00004, rollout=0.00096, z_rollout=0.00039, sindy=0.03819, sparse=2.77984
+Epoch 740
+   train total=0.00007, dec=0.00002, rollout=0.00098, z_rollout=0.00040, sindy=0.03735, sparse=2.80020
+   valid total=0.00006, dec=0.00002, rollout=0.00084, z_rollout=0.00033, sindy=0.02882, sparse=2.80059
+Epoch 760
+   train total=0.00008, dec=0.00004, rollout=0.00094, z_rollout=0.00038, sindy=0.03869, sparse=2.81655
+   valid total=0.00010, dec=0.00006, rollout=0.00079, z_rollout=0.00031, sindy=0.03164, sparse=2.81676
+Epoch 780
+   train total=0.00006, dec=0.00002, rollout=0.00090, z_rollout=0.00036, sindy=0.03221, sparse=2.83408
+   valid total=0.00005, dec=0.00001, rollout=0.00078, z_rollout=0.00030, sindy=0.02572, sparse=2.83424
+THRESHOLDING epoch 800: 7 active coefficients, 1 newly pruned
+   Threshold epoch 800: collapse guard skipped; pruning is kept and this epoch is accepted.
+Epoch 800
+   train total=0.00006, dec=0.00002, rollout=0.00090, z_rollout=0.00035, sindy=0.03042, sparse=2.84488
+   valid total=0.00005, dec=0.00001, rollout=0.00077, z_rollout=0.00030, sindy=0.02504, sparse=2.84562
+Epoch 820
+   train total=0.00006, dec=0.00002, rollout=0.00085, z_rollout=0.00033, sindy=0.02828, sparse=2.86003
+   valid total=0.00005, dec=0.00001, rollout=0.00073, z_rollout=0.00028, sindy=0.02368, sparse=2.86016
+Epoch 840
+   train total=0.00006, dec=0.00002, rollout=0.00081, z_rollout=0.00032, sindy=0.03054, sparse=2.86962
+   valid total=0.00005, dec=0.00002, rollout=0.00071, z_rollout=0.00026, sindy=0.02348, sparse=2.86983
+Epoch 860
+   train total=0.00008, dec=0.00004, rollout=0.00082, z_rollout=0.00031, sindy=0.03195, sparse=2.87842
+   valid total=0.00005, dec=0.00001, rollout=0.00069, z_rollout=0.00025, sindy=0.02210, sparse=2.87902
+Epoch 880
+   train total=0.00006, dec=0.00002, rollout=0.00076, z_rollout=0.00029, sindy=0.02616, sparse=2.88783
+   valid total=0.00005, dec=0.00002, rollout=0.00066, z_rollout=0.00025, sindy=0.02121, sparse=2.88783
+Epoch 900
+   train total=0.00006, dec=0.00002, rollout=0.00074, z_rollout=0.00028, sindy=0.02423, sparse=2.89454
+   valid total=0.00007, dec=0.00003, rollout=0.00064, z_rollout=0.00024, sindy=0.02015, sparse=2.89471
+Epoch 920
+   train total=0.00006, dec=0.00002, rollout=0.00071, z_rollout=0.00027, sindy=0.02398, sparse=2.89885
+   valid total=0.00005, dec=0.00002, rollout=0.00061, z_rollout=0.00023, sindy=0.01973, sparse=2.89876
+Epoch 940
+   train total=0.00006, dec=0.00002, rollout=0.00071, z_rollout=0.00027, sindy=0.02660, sparse=2.90731
+   valid total=0.00005, dec=0.00001, rollout=0.00061, z_rollout=0.00023, sindy=0.02340, sparse=2.90741
+Epoch 960
+   train total=0.00006, dec=0.00002, rollout=0.00069, z_rollout=0.00026, sindy=0.02241, sparse=2.91132
+   valid total=0.00006, dec=0.00002, rollout=0.00060, z_rollout=0.00022, sindy=0.02027, sparse=2.91150
+Epoch 980
+   train total=0.00006, dec=0.00002, rollout=0.00067, z_rollout=0.00025, sindy=0.02319, sparse=2.91319
+   valid total=0.00005, dec=0.00001, rollout=0.00059, z_rollout=0.00021, sindy=0.02015, sparse=2.91333
+THRESHOLDING epoch 1000: 7 active coefficients, 0 newly pruned
+   Threshold epoch 1000: collapse guard skipped; pruning is kept and this epoch is accepted.
+Epoch 1000
+   train total=0.00008, dec=0.00004, rollout=0.00069, z_rollout=0.00025, sindy=0.03224, sparse=2.91465
+   valid total=0.00005, dec=0.00001, rollout=0.00059, z_rollout=0.00021, sindy=0.01995, sparse=2.91511
+Epoch 1020
+   train total=0.00006, dec=0.00002, rollout=0.00064, z_rollout=0.00023, sindy=0.02396, sparse=2.92000
+   valid total=0.00008, dec=0.00005, rollout=0.00057, z_rollout=0.00021, sindy=0.02066, sparse=2.91981
+Epoch 1040
+   train total=0.00006, dec=0.00002, rollout=0.00062, z_rollout=0.00022, sindy=0.02416, sparse=2.91999
+   valid total=0.00007, dec=0.00003, rollout=0.00053, z_rollout=0.00019, sindy=0.02038, sparse=2.91978
+Epoch 1060
+   train total=0.00007, dec=0.00004, rollout=0.00061, z_rollout=0.00022, sindy=0.02485, sparse=2.91738
+   valid total=0.00017, dec=0.00013, rollout=0.00060, z_rollout=0.00020, sindy=0.02179, sparse=2.91739
+Epoch 1080
+   train total=0.00007, dec=0.00003, rollout=0.00062, z_rollout=0.00022, sindy=0.02542, sparse=2.91592
+   valid total=0.00005, dec=0.00001, rollout=0.00053, z_rollout=0.00018, sindy=0.01937, sparse=2.91604
+Epoch 1100
+   train total=0.00010, dec=0.00006, rollout=0.00061, z_rollout=0.00021, sindy=0.02824, sparse=2.91243
+   valid total=0.00011, dec=0.00007, rollout=0.00056, z_rollout=0.00019, sindy=0.01942, sparse=2.91237
+Epoch 1120
+   train total=0.00005, dec=0.00002, rollout=0.00057, z_rollout=0.00020, sindy=0.02158, sparse=2.91005
+   valid total=0.00005, dec=0.00001, rollout=0.00051, z_rollout=0.00018, sindy=0.01813, sparse=2.90995
+Epoch 1140
+   train total=0.00006, dec=0.00002, rollout=0.00060, z_rollout=0.00021, sindy=0.03498, sparse=2.90699
+   valid total=0.00005, dec=0.00001, rollout=0.00050, z_rollout=0.00016, sindy=0.01944, sparse=2.90708
+Epoch 1160
+   train total=0.00005, dec=0.00002, rollout=0.00055, z_rollout=0.00019, sindy=0.02042, sparse=2.90354
+   valid total=0.00005, dec=0.00001, rollout=0.00047, z_rollout=0.00016, sindy=0.01623, sparse=2.90337
+Epoch 1180
+   train total=0.00006, dec=0.00002, rollout=0.00054, z_rollout=0.00019, sindy=0.01881, sparse=2.90305
+   valid total=0.00005, dec=0.00001, rollout=0.00046, z_rollout=0.00015, sindy=0.01608, sparse=2.90285
+THRESHOLDING epoch 1200: 7 active coefficients, 0 newly pruned
+   Threshold epoch 1200: collapse guard skipped; pruning is kept and this epoch is accepted.
+Epoch 1200
+   train total=0.00007, dec=0.00003, rollout=0.00054, z_rollout=0.00019, sindy=0.02046, sparse=2.89701
+   valid total=0.00006, dec=0.00002, rollout=0.00048, z_rollout=0.00016, sindy=0.01710, sparse=2.89690
+Epoch 1220
+   train total=0.00005, dec=0.00002, rollout=0.00053, z_rollout=0.00018, sindy=0.01754, sparse=2.89251
+   valid total=0.00005, dec=0.00001, rollout=0.00046, z_rollout=0.00015, sindy=0.01512, sparse=2.89243
+Epoch 1240
+   train total=0.00005, dec=0.00002, rollout=0.00052, z_rollout=0.00018, sindy=0.01727, sparse=2.88705
+   valid total=0.00005, dec=0.00001, rollout=0.00044, z_rollout=0.00015, sindy=0.01406, sparse=2.88682
+Epoch 1260
+   train total=0.00005, dec=0.00001, rollout=0.00050, z_rollout=0.00017, sindy=0.01687, sparse=2.87985
+   valid total=0.00005, dec=0.00001, rollout=0.00043, z_rollout=0.00015, sindy=0.01398, sparse=2.87950
+Epoch 1280
+   train total=0.00006, dec=0.00002, rollout=0.00050, z_rollout=0.00017, sindy=0.01748, sparse=2.87257
+   valid total=0.00005, dec=0.00001, rollout=0.00043, z_rollout=0.00014, sindy=0.01540, sparse=2.87223
+Epoch 1300
+   train total=0.00012, dec=0.00009, rollout=0.00055, z_rollout=0.00019, sindy=0.02649, sparse=2.86513
+   valid total=0.00006, dec=0.00003, rollout=0.00045, z_rollout=0.00015, sindy=0.01595, sparse=2.86534
+Epoch 1320
+   train total=0.00005, dec=0.00001, rollout=0.00049, z_rollout=0.00016, sindy=0.01659, sparse=2.86286
+   valid total=0.00005, dec=0.00001, rollout=0.00043, z_rollout=0.00014, sindy=0.01386, sparse=2.86259
+Epoch 1340
+   train total=0.00005, dec=0.00002, rollout=0.00048, z_rollout=0.00016, sindy=0.01674, sparse=2.85576
+   valid total=0.00005, dec=0.00001, rollout=0.00041, z_rollout=0.00014, sindy=0.01359, sparse=2.85554
+Epoch 1360
+   train total=0.00017, dec=0.00013, rollout=0.00057, z_rollout=0.00019, sindy=0.03155, sparse=2.84514
+   valid total=0.00005, dec=0.00002, rollout=0.00045, z_rollout=0.00014, sindy=0.01497, sparse=2.84558
+Epoch 1380
+   train total=0.00005, dec=0.00002, rollout=0.00046, z_rollout=0.00017, sindy=0.01708, sparse=2.83728
+   valid total=0.00007, dec=0.00003, rollout=0.00039, z_rollout=0.00014, sindy=0.01414, sparse=2.83691
+THRESHOLDING epoch 1400: 7 active coefficients, 0 newly pruned
+   Threshold epoch 1400: collapse guard skipped; pruning is kept and this epoch is accepted.
+Epoch 1400
+   train total=0.00006, dec=0.00002, rollout=0.00045, z_rollout=0.00017, sindy=0.01830, sparse=2.82911
+   valid total=0.00005, dec=0.00002, rollout=0.00039, z_rollout=0.00014, sindy=0.01432, sparse=2.82859
+Epoch 1420
+   train total=0.00006, dec=0.00002, rollout=0.00047, z_rollout=0.00016, sindy=0.01875, sparse=2.81805
+   valid total=0.00004, dec=0.00001, rollout=0.00039, z_rollout=0.00014, sindy=0.01265, sparse=2.81795
+Epoch 1440
+   train total=0.00005, dec=0.00002, rollout=0.00044, z_rollout=0.00017, sindy=0.01799, sparse=2.80862
+   valid total=0.00007, dec=0.00004, rollout=0.00040, z_rollout=0.00014, sindy=0.01434, sparse=2.80825
+Epoch 1460
+   train total=0.00005, dec=0.00001, rollout=0.00043, z_rollout=0.00016, sindy=0.01867, sparse=2.79969
+   valid total=0.00004, dec=0.00001, rollout=0.00037, z_rollout=0.00014, sindy=0.01281, sparse=2.79942
+Epoch 1480
+   train total=0.00005, dec=0.00001, rollout=0.00042, z_rollout=0.00016, sindy=0.01808, sparse=2.79068
+   valid total=0.00004, dec=0.00001, rollout=0.00038, z_rollout=0.00013, sindy=0.01263, sparse=2.79022
+Epoch 1500
+   train total=0.00005, dec=0.00001, rollout=0.00041, z_rollout=0.00016, sindy=0.01690, sparse=2.77932
+   valid total=0.00004, dec=0.00001, rollout=0.00035, z_rollout=0.00013, sindy=0.01333, sparse=2.77895
+Epoch 1520
+   train total=0.00005, dec=0.00001, rollout=0.00041, z_rollout=0.00016, sindy=0.01698, sparse=2.76928
+   valid total=0.00004, dec=0.00001, rollout=0.00035, z_rollout=0.00014, sindy=0.01419, sparse=2.76893
+Epoch 1540
+   train total=0.00004, dec=0.00001, rollout=0.00042, z_rollout=0.00014, sindy=0.01544, sparse=2.75579
+   valid total=0.00004, dec=0.00001, rollout=0.00035, z_rollout=0.00013, sindy=0.01132, sparse=2.75580
+Epoch 1560
+   train total=0.00005, dec=0.00002, rollout=0.00039, z_rollout=0.00015, sindy=0.01767, sparse=2.74392
+   valid total=0.00004, dec=0.00001, rollout=0.00033, z_rollout=0.00013, sindy=0.01465, sparse=2.74364
+Epoch 1580
+   train total=0.00006, dec=0.00003, rollout=0.00040, z_rollout=0.00016, sindy=0.01896, sparse=2.73303
+   valid total=0.00004, dec=0.00001, rollout=0.00033, z_rollout=0.00013, sindy=0.01350, sparse=2.73272
+THRESHOLDING epoch 1600: 7 active coefficients, 0 newly pruned
+   Threshold epoch 1600: collapse guard skipped; pruning is kept and this epoch is accepted.
+Epoch 1600
+   train total=0.00004, dec=0.00001, rollout=0.00038, z_rollout=0.00015, sindy=0.01617, sparse=2.72031
+   valid total=0.00004, dec=0.00001, rollout=0.00032, z_rollout=0.00013, sindy=0.01235, sparse=2.71986
+Epoch 1620
+   train total=0.00005, dec=0.00002, rollout=0.00038, z_rollout=0.00016, sindy=0.01924, sparse=2.70520
+   valid total=0.00007, dec=0.00003, rollout=0.00035, z_rollout=0.00013, sindy=0.01474, sparse=2.70491
+Epoch 1640
+   train total=0.00004, dec=0.00001, rollout=0.00036, z_rollout=0.00016, sindy=0.01602, sparse=2.69155
+   valid total=0.00005, dec=0.00001, rollout=0.00030, z_rollout=0.00012, sindy=0.01245, sparse=2.69110
+Epoch 1660
+   train total=0.00004, dec=0.00001, rollout=0.00035, z_rollout=0.00015, sindy=0.01522, sparse=2.67782
+   valid total=0.00004, dec=0.00001, rollout=0.00029, z_rollout=0.00013, sindy=0.01211, sparse=2.67748
+Epoch 1680
+   train total=0.00004, dec=0.00001, rollout=0.00034, z_rollout=0.00015, sindy=0.01650, sparse=2.66410
+   valid total=0.00004, dec=0.00001, rollout=0.00028, z_rollout=0.00012, sindy=0.01192, sparse=2.66350
+Epoch 1700
+   train total=0.00005, dec=0.00002, rollout=0.00034, z_rollout=0.00015, sindy=0.01619, sparse=2.64915
+   valid total=0.00004, dec=0.00001, rollout=0.00028, z_rollout=0.00011, sindy=0.01165, sparse=2.64880
+Epoch 1720
+   train total=0.00004, dec=0.00001, rollout=0.00033, z_rollout=0.00014, sindy=0.01522, sparse=2.63880
+   valid total=0.00005, dec=0.00002, rollout=0.00029, z_rollout=0.00011, sindy=0.01093, sparse=2.63863
+Epoch 1740
+   train total=0.00004, dec=0.00001, rollout=0.00033, z_rollout=0.00014, sindy=0.01527, sparse=2.63381
+   valid total=0.00004, dec=0.00001, rollout=0.00028, z_rollout=0.00011, sindy=0.01132, sparse=2.63362
+Epoch 1760
+   train total=0.00005, dec=0.00002, rollout=0.00033, z_rollout=0.00013, sindy=0.01548, sparse=2.62933
+   valid total=0.00007, dec=0.00004, rollout=0.00028, z_rollout=0.00010, sindy=0.01067, sparse=2.62934
+Epoch 1780
+   train total=0.00005, dec=0.00002, rollout=0.00032, z_rollout=0.00013, sindy=0.01585, sparse=2.62712
+   valid total=0.00005, dec=0.00002, rollout=0.00026, z_rollout=0.00010, sindy=0.01028, sparse=2.62716
+THRESHOLDING epoch 1800: 5 active coefficients, 2 newly pruned
+   Threshold epoch 1800: collapse guard skipped; pruning is kept and this epoch is accepted.
+Epoch 1800
+   train total=0.00004, dec=0.00001, rollout=0.00032, z_rollout=0.00012, sindy=0.01480, sparse=2.62289
+   valid total=0.00004, dec=0.00001, rollout=0.00027, z_rollout=0.00010, sindy=0.01159, sparse=2.62296
+Epoch 1820
+   train total=0.00004, dec=0.00001, rollout=0.00031, z_rollout=0.00012, sindy=0.01410, sparse=2.62310
+   valid total=0.00004, dec=0.00001, rollout=0.00026, z_rollout=0.00010, sindy=0.01049, sparse=2.62318
+Epoch 1840
+   train total=0.00004, dec=0.00001, rollout=0.00030, z_rollout=0.00012, sindy=0.01507, sparse=2.62430
+   valid total=0.00004, dec=0.00001, rollout=0.00024, z_rollout=0.00009, sindy=0.01010, sparse=2.62418
+Epoch 1860
+   train total=0.00010, dec=0.00006, rollout=0.00035, z_rollout=0.00013, sindy=0.02449, sparse=2.62416
+   valid total=0.00004, dec=0.00001, rollout=0.00025, z_rollout=0.00009, sindy=0.01126, sparse=2.62449
+Epoch 1880
+   train total=0.00004, dec=0.00001, rollout=0.00029, z_rollout=0.00012, sindy=0.01359, sparse=2.62923
+   valid total=0.00004, dec=0.00001, rollout=0.00024, z_rollout=0.00010, sindy=0.01081, sparse=2.62931
+Epoch 1900
+   train total=0.00005, dec=0.00002, rollout=0.00029, z_rollout=0.00013, sindy=0.01477, sparse=2.63010
+   valid total=0.00004, dec=0.00001, rollout=0.00023, z_rollout=0.00009, sindy=0.01066, sparse=2.63018
+Epoch 1920
+   train total=0.00004, dec=0.00001, rollout=0.00028, z_rollout=0.00012, sindy=0.01382, sparse=2.62954
+   valid total=0.00004, dec=0.00001, rollout=0.00023, z_rollout=0.00009, sindy=0.01042, sparse=2.62962
+Epoch 1940
+   train total=0.00004, dec=0.00001, rollout=0.00027, z_rollout=0.00013, sindy=0.01360, sparse=2.63299
+   valid total=0.00004, dec=0.00001, rollout=0.00022, z_rollout=0.00010, sindy=0.00995, sparse=2.63312
+Epoch 1960
+   train total=0.00004, dec=0.00001, rollout=0.00027, z_rollout=0.00013, sindy=0.01421, sparse=2.63211
+   valid total=0.00004, dec=0.00001, rollout=0.00022, z_rollout=0.00010, sindy=0.01043, sparse=2.63200
+Epoch 1980
+   train total=0.00009, dec=0.00006, rollout=0.00031, z_rollout=0.00014, sindy=0.02188, sparse=2.63138
+   valid total=0.00005, dec=0.00002, rollout=0.00023, z_rollout=0.00009, sindy=0.01138, sparse=2.63145
+THRESHOLDING epoch 2000: 5 active coefficients, 0 newly pruned
+   Threshold epoch 2000: collapse guard skipped; pruning is kept and this epoch is accepted.
+Epoch 2000
+   train total=0.00004, dec=0.00001, rollout=0.00026, z_rollout=0.00013, sindy=0.01471, sparse=2.63147
+   valid total=0.00004, dec=0.00001, rollout=0.00021, z_rollout=0.00010, sindy=0.01059, sparse=2.63140
+POSTTRAINING: DECODER ONLY WITH CACHED FIXED-SINDY ROLLOUTS
+   frozen: encoder + SINDy coefficients
+   trainable: decoder only
+   path: X_{s-w+1:s} -> frozen encoder -> z_s/v_s -> fixed SINDy rollout z(s:T) -> decoder -> X(s:T)
+   fixed SINDy rollouts are computed once before decoder training and cached on CPU.
+   loading formal checkpoint for posttraining: source=best_formal_score, path=/data/home/zhuyibjut/aeleap/beam9/outputs/duffing_video_sindy_2026_06_12_10_28_39_best_formal_score.pt
+/data/home/zhuyibjut/aeleap/beam9/training.py:823: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(path, map_location=device)
+   loaded formal checkpoint: phase=formal_best_score, epoch=1985, best_val_loss=0.00021305637284586964
+   building posttrain dataloaders...
+   posttrain train samples: 80; batch_size=1
+   posttrain valid samples: 10; batch_size=1
+   building fixed-SINDy rollout caches from segment-start initial states...
+Built train posttrain fixed-SINDy rollout cache: 800 cached start batches, 800 rollouts, 176000 target frames.
+Built val posttrain fixed-SINDy rollout cache: 100 cached start batches, 100 rollouts, 22000 target frames.
+Posttrain decoder-only fixed-rollout Epoch 0
+   train rollout-dec=0.00155
+   valid rollout-dec=0.00115
+Posttrain decoder-only fixed-rollout Epoch 20
+   train rollout-dec=0.00145
+   valid rollout-dec=0.00113
+Posttrain decoder-only fixed-rollout Epoch 40
+   train rollout-dec=0.00143
+   valid rollout-dec=0.00112
+Posttrain decoder-only fixed-rollout Epoch 60
+   train rollout-dec=0.00142
+   valid rollout-dec=0.00112
+Posttrain decoder-only fixed-rollout Epoch 80
+   train rollout-dec=0.00141
+   valid rollout-dec=0.00112
+Posttrain decoder-only fixed-rollout Epoch 100
+   train rollout-dec=0.00141
+   valid rollout-dec=0.00112
+Posttrain decoder-only fixed-rollout Epoch 120
+   train rollout-dec=0.00140
+   valid rollout-dec=0.00112
+Posttrain decoder-only fixed-rollout Epoch 140
+   train rollout-dec=0.00140
+   valid rollout-dec=0.00112
+Posttrain decoder-only fixed-rollout Epoch 160
+   train rollout-dec=0.00140
+   valid rollout-dec=0.00112
+Posttrain decoder-only fixed-rollout Epoch 180
+   train rollout-dec=0.00139
+   valid rollout-dec=0.00112
+Posttrain decoder-only fixed-rollout Epoch 200
+   train rollout-dec=0.00139
+   valid rollout-dec=0.00111
+Posttrain decoder-only fixed-rollout Epoch 220
+   train rollout-dec=0.00139
+   valid rollout-dec=0.00111
+Posttrain decoder-only fixed-rollout Epoch 240
+   train rollout-dec=0.00139
+   valid rollout-dec=0.00111
+Posttrain decoder-only fixed-rollout Epoch 260
+   train rollout-dec=0.00138
+   valid rollout-dec=0.00111
+Posttrain decoder-only fixed-rollout Epoch 280
+   train rollout-dec=0.00138
+   valid rollout-dec=0.00111
+Posttrain decoder-only fixed-rollout Epoch 300
+   train rollout-dec=0.00138
+   valid rollout-dec=0.00111
+Posttrain decoder-only fixed-rollout Epoch 320
+   train rollout-dec=0.00137
+   valid rollout-dec=0.00110
+Posttrain decoder-only fixed-rollout Epoch 340
+   train rollout-dec=0.00137
+   valid rollout-dec=0.00110
+Posttrain decoder-only fixed-rollout Epoch 360
+   train rollout-dec=0.00137
+   valid rollout-dec=0.00109
+Posttrain decoder-only fixed-rollout Epoch 380
+   train rollout-dec=0.00136
+   valid rollout-dec=0.00109
+Posttrain decoder-only fixed-rollout Epoch 400
+   train rollout-dec=0.00136
+   valid rollout-dec=0.00108
+Posttrain decoder-only fixed-rollout Epoch 420
+   train rollout-dec=0.00136
+   valid rollout-dec=0.00108
+Posttrain decoder-only fixed-rollout Epoch 440
+   train rollout-dec=0.00136
+   valid rollout-dec=0.00108
+Posttrain decoder-only fixed-rollout Epoch 460
+   train rollout-dec=0.00136
+   valid rollout-dec=0.00108
+Posttrain decoder-only fixed-rollout Epoch 480
+   train rollout-dec=0.00135
+   valid rollout-dec=0.00107
+Posttrain decoder-only fixed-rollout Epoch 500
+   train rollout-dec=0.00135
+   valid rollout-dec=0.00107
+Training finished. Best validation loss: 0.00107
+Best formal rollout loss: 0.00021
+Best model saved to: /data/home/zhuyibjut/aeleap/beam9/outputs/duffing_video_sindy_2026_06_12_10_28_39_best.pt
+Best formal rollout checkpoint saved to: /data/home/zhuyibjut/aeleap/beam9/outputs/duffing_video_sindy_2026_06_12_10_28_39_best_formal_rollout.pt
+Last safe formal checkpoint saved to: /data/home/zhuyibjut/aeleap/beam9/outputs/duffing_video_sindy_2026_06_12_10_28_39_last_safe_formal.pt
+Last model saved to: /data/home/zhuyibjut/aeleap/beam9/outputs/duffing_video_sindy_2026_06_12_10_28_39_last.pt

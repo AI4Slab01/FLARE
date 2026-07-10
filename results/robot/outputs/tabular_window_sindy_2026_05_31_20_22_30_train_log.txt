@@ -1,0 +1,654 @@
+Training log will be saved to: /data/home/zhuyibjut/aeleap/robot1/outputs/tabular_window_sindy_2026_05_31_20_22_30_train_log.txt
+Using device: cuda
+Window-state encoder length: 5
+Pretrain part 1: epochs=201, lr=0.001, latent_dim_before_selection=16
+Intrinsic-dimension selection: method=twonn, k=8, max_points=5000, divide_by_model_order=False
+Pretrain part 2: epochs=201, lr=0.001, latent_dim_after_selection=auto-selected
+Formal training learning rates: base=0.001, sindy=0.001
+Formal training uses the window-state encoder for rollout initialization; no separate initial-condition network loss is used.
+Decoder-only posttraining: epochs=501, lr=0.0001
+Posttraining freezes encoder and SINDy; fixed SINDy rollout z(t) is cached from encoder-initialized segment starts, then decoder only is trained.
+PRETRAINING PART 1 ENCODER-DECODER BEFORE LATENT-DIM SELECTION
+PRETRAINING PART 1 ENCODER-DECODER BEFORE LATENT-DIM SELECTION Epoch 0
+   train dec=0.11107
+   valid dec=0.01890
+PRETRAINING PART 1 ENCODER-DECODER BEFORE LATENT-DIM SELECTION Epoch 20
+   train dec=0.00283
+   valid dec=0.00336
+PRETRAINING PART 1 ENCODER-DECODER BEFORE LATENT-DIM SELECTION Epoch 40
+   train dec=0.00516
+   valid dec=0.00442
+PRETRAINING PART 1 ENCODER-DECODER BEFORE LATENT-DIM SELECTION Epoch 60
+   train dec=0.01180
+   valid dec=0.00296
+PRETRAINING PART 1 ENCODER-DECODER BEFORE LATENT-DIM SELECTION Epoch 80
+   train dec=0.00343
+   valid dec=0.00207
+PRETRAINING PART 1 ENCODER-DECODER BEFORE LATENT-DIM SELECTION Epoch 100
+   train dec=0.00168
+   valid dec=0.00087
+PRETRAINING PART 1 ENCODER-DECODER BEFORE LATENT-DIM SELECTION Epoch 120
+   train dec=0.00259
+   valid dec=0.00191
+PRETRAINING PART 1 ENCODER-DECODER BEFORE LATENT-DIM SELECTION Epoch 140
+   train dec=0.00113
+   valid dec=0.00075
+PRETRAINING PART 1 ENCODER-DECODER BEFORE LATENT-DIM SELECTION Epoch 160
+   train dec=0.00186
+   valid dec=0.00094
+PRETRAINING PART 1 ENCODER-DECODER BEFORE LATENT-DIM SELECTION Epoch 180
+   train dec=0.00130
+   valid dec=0.00094
+PRETRAINING PART 1 ENCODER-DECODER BEFORE LATENT-DIM SELECTION Epoch 200
+   train dec=0.00268
+   valid dec=0.00141
+ESTIMATING INTRINSIC DIMENSION ON PART-1 ENCODER LATENT CLOUD
+Intrinsic dimension selected latent_dim=4 from pre_pca_latent_dim=16 using method=twonn; raw=3.9917, divisor=1.00, adjusted=3.9917.
+PRETRAINING PART 2 ENCODER-DECODER AFTER LATENT-DIM SELECTION
+PRETRAINING PART 2 ENCODER-DECODER AFTER LATENT-DIM SELECTION Epoch 0
+   train dec=0.12783
+   valid dec=0.02825
+PRETRAINING PART 2 ENCODER-DECODER AFTER LATENT-DIM SELECTION Epoch 20
+   train dec=0.00849
+   valid dec=0.00557
+PRETRAINING PART 2 ENCODER-DECODER AFTER LATENT-DIM SELECTION Epoch 40
+   train dec=0.00182
+   valid dec=0.00124
+PRETRAINING PART 2 ENCODER-DECODER AFTER LATENT-DIM SELECTION Epoch 60
+   train dec=0.00370
+   valid dec=0.00162
+PRETRAINING PART 2 ENCODER-DECODER AFTER LATENT-DIM SELECTION Epoch 80
+   train dec=0.00286
+   valid dec=0.00134
+PRETRAINING PART 2 ENCODER-DECODER AFTER LATENT-DIM SELECTION Epoch 100
+   train dec=0.00093
+   valid dec=0.00061
+PRETRAINING PART 2 ENCODER-DECODER AFTER LATENT-DIM SELECTION Epoch 120
+   train dec=0.00130
+   valid dec=0.00108
+PRETRAINING PART 2 ENCODER-DECODER AFTER LATENT-DIM SELECTION Epoch 140
+   train dec=0.00104
+   valid dec=0.00128
+PRETRAINING PART 2 ENCODER-DECODER AFTER LATENT-DIM SELECTION Epoch 160
+   train dec=0.00035
+   valid dec=0.00030
+PRETRAINING PART 2 ENCODER-DECODER AFTER LATENT-DIM SELECTION Epoch 180
+   train dec=0.00037
+   valid dec=0.00056
+PRETRAINING PART 2 ENCODER-DECODER AFTER LATENT-DIM SELECTION Epoch 200
+   train dec=0.00059
+   valid dec=0.00075
+FORMAL TRAINING WITH WINDOW-STATE ENCODER INITIALIZATION
+Formal collapse guard: enabled=True, dec_ratio>=3.0, rollout_ratio>=3.0, sindy_ratio>=3.0, lr_decay=0.5, max_consecutive=3
+Epoch 0
+   train total=0.58536, dec=0.09520, rollout=1.90019, z_rollout=13.67643, sindy=4574.84208, sparse=0.00904
+   valid total=0.09737, dec=0.06212, rollout=1.60681, z_rollout=0.44425, sindy=187.37781, sparse=0.01697
+Epoch 20
+   train total=0.01659, dec=0.00658, rollout=0.80597, z_rollout=0.05107, sindy=18.92622, sparse=0.19901
+   valid total=0.01511, dec=0.00646, rollout=0.73026, z_rollout=0.04656, sindy=12.91778, sparse=0.20246
+Epoch 40
+   train total=0.01283, dec=0.00634, rollout=0.49760, z_rollout=0.03504, sindy=14.70321, sparse=0.30228
+   valid total=0.01086, dec=0.00488, rollout=0.48263, z_rollout=0.03281, sindy=11.19647, sparse=0.30424
+Epoch 60
+   train total=0.01387, dec=0.00929, rollout=0.33294, z_rollout=0.02175, sindy=12.18313, sparse=0.39026
+   valid total=0.01317, dec=0.00874, rollout=0.33912, z_rollout=0.02351, sindy=10.09978, sparse=0.39191
+Epoch 80
+   train total=0.01064, dec=0.00714, rollout=0.24617, z_rollout=0.01576, sindy=10.25476, sparse=0.46197
+   valid total=0.01252, dec=0.00912, rollout=0.25163, z_rollout=0.01751, sindy=8.69563, sparse=0.46337
+Epoch 100
+   train total=0.00896, dec=0.00600, rollout=0.19450, z_rollout=0.01266, sindy=9.99043, sparse=0.52389
+   valid total=0.01144, dec=0.00871, rollout=0.18989, z_rollout=0.01280, sindy=8.09813, sparse=0.52590
+Epoch 120
+   train total=0.00955, dec=0.00701, rollout=0.15884, z_rollout=0.01020, sindy=9.37322, sparse=0.58050
+   valid total=0.00739, dec=0.00502, rollout=0.15705, z_rollout=0.01086, sindy=7.89899, sparse=0.58139
+Epoch 140
+   train total=0.00667, dec=0.00442, rollout=0.12943, z_rollout=0.00851, sindy=9.45692, sparse=0.63136
+   valid total=0.00395, dec=0.00185, rollout=0.12915, z_rollout=0.00911, sindy=7.85255, sparse=0.63247
+Epoch 160
+   train total=0.00622, dec=0.00416, rollout=0.11350, z_rollout=0.00805, sindy=9.10142, sparse=0.67660
+   valid total=0.00459, dec=0.00269, rollout=0.11247, z_rollout=0.00865, sindy=7.58452, sparse=0.67774
+Epoch 180
+   train total=0.00737, dec=0.00545, rollout=0.09920, z_rollout=0.00719, sindy=9.16276, sparse=0.72128
+   valid total=0.00538, dec=0.00361, rollout=0.10006, z_rollout=0.00753, sindy=7.55310, sparse=0.72200
+Epoch 200
+   train total=0.00614, dec=0.00439, rollout=0.08683, z_rollout=0.00601, sindy=8.71035, sparse=0.75809
+   valid total=0.00392, dec=0.00223, rollout=0.08997, z_rollout=0.00724, sindy=7.67870, sparse=0.75944
+Epoch 220
+   train total=0.00610, dec=0.00437, rollout=0.08000, z_rollout=0.00604, sindy=9.16839, sparse=0.79295
+   valid total=0.01898, dec=0.01730, rollout=0.08307, z_rollout=0.00722, sindy=8.37072, sparse=0.79343
+Epoch 240
+   train total=0.00619, dec=0.00455, rollout=0.07243, z_rollout=0.00563, sindy=9.01767, sparse=0.82346
+   valid total=0.00430, dec=0.00278, rollout=0.07387, z_rollout=0.00630, sindy=7.71129, sparse=0.82394
+Epoch 260
+   train total=0.00407, dec=0.00248, rollout=0.06853, z_rollout=0.00525, sindy=8.94404, sparse=0.84906
+   valid total=0.00536, dec=0.00395, rollout=0.06797, z_rollout=0.00557, sindy=7.18200, sparse=0.85028
+Epoch 280
+   train total=0.00542, dec=0.00389, rollout=0.06392, z_rollout=0.00492, sindy=8.71778, sparse=0.87518
+   valid total=0.00363, dec=0.00227, rollout=0.06426, z_rollout=0.00563, sindy=7.01314, sparse=0.87599
+THRESHOLDING epoch 300: 76 active coefficients, 120 newly pruned
+   Threshold epoch 300: collapse guard skipped; pruning is kept and this epoch is accepted.
+Epoch 300
+   train total=0.00497, dec=0.00307, rollout=0.10146, z_rollout=0.00758, sindy=8.68581, sparse=0.78602
+   valid total=0.00623, dec=0.00467, rollout=0.08546, z_rollout=0.00636, sindy=6.87625, sparse=0.78751
+Epoch 320
+   train total=0.00550, dec=0.00398, rollout=0.06315, z_rollout=0.00505, sindy=8.77240, sparse=0.80798
+   valid total=0.00500, dec=0.00368, rollout=0.06163, z_rollout=0.00523, sindy=6.97729, sparse=0.80867
+Epoch 340
+   train total=0.00538, dec=0.00397, rollout=0.05771, z_rollout=0.00446, sindy=8.26609, sparse=0.82717
+   valid total=0.00504, dec=0.00376, rollout=0.05732, z_rollout=0.00486, sindy=6.92532, sparse=0.82776
+Epoch 360
+   train total=0.00474, dec=0.00334, rollout=0.05534, z_rollout=0.00439, sindy=8.33844, sparse=0.84506
+   valid total=0.00351, dec=0.00229, rollout=0.05471, z_rollout=0.00464, sindy=6.65499, sparse=0.84550
+Epoch 380
+   train total=0.00385, dec=0.00258, rollout=0.05069, z_rollout=0.00384, sindy=7.48803, sparse=0.86449
+   valid total=0.00411, dec=0.00296, rollout=0.05111, z_rollout=0.00416, sindy=6.31060, sparse=0.86503
+Epoch 400
+   train total=0.00510, dec=0.00384, rollout=0.04813, z_rollout=0.00374, sindy=7.70674, sparse=0.88170
+   valid total=0.00319, dec=0.00206, rollout=0.04786, z_rollout=0.00416, sindy=6.38359, sparse=0.88169
+Epoch 420
+   train total=0.00609, dec=0.00482, rollout=0.04700, z_rollout=0.00375, sindy=7.83178, sparse=0.89794
+   valid total=0.00563, dec=0.00448, rollout=0.04644, z_rollout=0.00401, sindy=6.70444, sparse=0.89840
+Epoch 440
+   train total=0.00460, dec=0.00334, rollout=0.04504, z_rollout=0.00352, sindy=7.95512, sparse=0.91530
+   valid total=0.00340, dec=0.00229, rollout=0.04519, z_rollout=0.00379, sindy=6.40485, sparse=0.91565
+Epoch 460
+   train total=0.00321, dec=0.00200, rollout=0.04317, z_rollout=0.00366, sindy=7.66289, sparse=0.93384
+   valid total=0.00374, dec=0.00269, rollout=0.04317, z_rollout=0.00394, sindy=6.02877, sparse=0.93454
+Epoch 480
+   train total=0.00509, dec=0.00383, rollout=0.04310, z_rollout=0.00358, sindy=8.15594, sparse=0.94802
+   valid total=0.00784, dec=0.00671, rollout=0.04422, z_rollout=0.00414, sindy=6.70230, sparse=0.94841
+Epoch 500
+   train total=0.00514, dec=0.00391, rollout=0.04121, z_rollout=0.00332, sindy=8.06296, sparse=0.96598
+   valid total=0.00365, dec=0.00256, rollout=0.04046, z_rollout=0.00374, sindy=6.65755, sparse=0.96648
+Epoch 520
+   train total=0.00474, dec=0.00352, rollout=0.04048, z_rollout=0.00349, sindy=7.94933, sparse=0.98057
+   valid total=0.00306, dec=0.00200, rollout=0.04014, z_rollout=0.00390, sindy=6.47857, sparse=0.98058
+Epoch 540
+   train total=0.00364, dec=0.00252, rollout=0.03777, z_rollout=0.00316, sindy=7.29710, sparse=0.99905
+   valid total=0.00294, dec=0.00199, rollout=0.03737, z_rollout=0.00336, sindy=5.63826, sparse=0.99958
+Epoch 560
+   train total=0.00534, dec=0.00414, rollout=0.03715, z_rollout=0.00325, sindy=8.23619, sparse=1.01530
+   valid total=0.00389, dec=0.00285, rollout=0.03709, z_rollout=0.00364, sindy=6.49932, sparse=1.01556
+Epoch 580
+   train total=0.00431, dec=0.00317, rollout=0.03585, z_rollout=0.00301, sindy=7.68295, sparse=1.03143
+   valid total=0.00367, dec=0.00268, rollout=0.03468, z_rollout=0.00325, sindy=6.32063, sparse=1.03171
+THRESHOLDING epoch 600: 58 active coefficients, 18 newly pruned
+   Threshold epoch 600: collapse guard skipped; pruning is kept and this epoch is accepted.
+Epoch 600
+   train total=0.00404, dec=0.00288, rollout=0.03539, z_rollout=0.00289, sindy=7.84846, sparse=1.02799
+   valid total=0.00279, dec=0.00182, rollout=0.03484, z_rollout=0.00327, sindy=6.07336, sparse=1.02852
+Epoch 620
+   train total=0.00460, dec=0.00344, rollout=0.03511, z_rollout=0.00296, sindy=7.92368, sparse=1.04382
+   valid total=0.00281, dec=0.00184, rollout=0.03516, z_rollout=0.00343, sindy=6.05387, sparse=1.04423
+Epoch 640
+   train total=0.00478, dec=0.00367, rollout=0.03330, z_rollout=0.00274, sindy=7.67206, sparse=1.06001
+   valid total=0.00328, dec=0.00234, rollout=0.03256, z_rollout=0.00286, sindy=5.97872, sparse=1.06044
+Epoch 660
+   train total=0.00652, dec=0.00491, rollout=0.03513, z_rollout=0.00287, sindy=12.43831, sparse=1.07327
+   valid total=0.00383, dec=0.00261, rollout=0.03361, z_rollout=0.00313, sindy=8.73426, sparse=1.07347
+Epoch 680
+   train total=0.00490, dec=0.00372, rollout=0.03145, z_rollout=0.00256, sindy=8.58776, sparse=1.08866
+   valid total=0.00267, dec=0.00169, rollout=0.03107, z_rollout=0.00298, sindy=6.56271, sparse=1.08889
+Epoch 700
+   train total=0.00500, dec=0.00388, rollout=0.03231, z_rollout=0.00264, sindy=7.85958, sparse=1.09961
+   valid total=0.00687, dec=0.00583, rollout=0.03173, z_rollout=0.00294, sindy=7.03903, sparse=1.09990
+Epoch 720
+   train total=0.00561, dec=0.00448, rollout=0.03164, z_rollout=0.00264, sindy=8.02258, sparse=1.11430
+   valid total=0.00297, dec=0.00198, rollout=0.03139, z_rollout=0.00281, sindy=6.55975, sparse=1.11436
+Epoch 740
+   train total=0.00422, dec=0.00317, rollout=0.03033, z_rollout=0.00242, sindy=7.33472, sparse=1.12794
+   valid total=0.00572, dec=0.00481, rollout=0.03038, z_rollout=0.00267, sindy=5.89915, sparse=1.12825
+Epoch 760
+   train total=0.00503, dec=0.00399, rollout=0.02980, z_rollout=0.00237, sindy=7.27596, sparse=1.14096
+   valid total=0.00497, dec=0.00402, rollout=0.02958, z_rollout=0.00264, sindy=6.31749, sparse=1.14122
+Epoch 780
+   train total=0.00396, dec=0.00289, rollout=0.02980, z_rollout=0.00243, sindy=7.57544, sparse=1.15327
+   valid total=0.00405, dec=0.00317, rollout=0.02992, z_rollout=0.00255, sindy=5.73220, sparse=1.15314
+Epoch 800
+   train total=0.00520, dec=0.00414, rollout=0.02922, z_rollout=0.00236, sindy=7.61461, sparse=1.16721
+   valid total=0.00668, dec=0.00576, rollout=0.03011, z_rollout=0.00270, sindy=6.07238, sparse=1.16746
+Epoch 820
+   train total=0.00405, dec=0.00301, rollout=0.02833, z_rollout=0.00220, sindy=7.39139, sparse=1.18046
+   valid total=0.00344, dec=0.00258, rollout=0.02810, z_rollout=0.00237, sindy=5.69307, sparse=1.18060
+Epoch 840
+   train total=0.00465, dec=0.00358, rollout=0.02821, z_rollout=0.00239, sindy=7.75309, sparse=1.19253
+   valid total=0.00841, dec=0.00740, rollout=0.02869, z_rollout=0.00293, sindy=7.08737, sparse=1.19260
+Epoch 860
+   train total=0.00438, dec=0.00332, rollout=0.02787, z_rollout=0.00230, sindy=7.62947, sparse=1.20452
+   valid total=0.00202, dec=0.00116, rollout=0.02746, z_rollout=0.00237, sindy=5.78801, sparse=1.20464
+Epoch 880
+   train total=0.00485, dec=0.00380, rollout=0.02740, z_rollout=0.00216, sindy=7.62044, sparse=1.21745
+   valid total=0.00349, dec=0.00260, rollout=0.02731, z_rollout=0.00231, sindy=5.99555, sparse=1.21745
+THRESHOLDING epoch 900: 57 active coefficients, 1 newly pruned
+   Threshold epoch 900: collapse guard skipped; pruning is kept and this epoch is accepted.
+Epoch 900
+   train total=0.00402, dec=0.00296, rollout=0.02744, z_rollout=0.00221, sindy=7.77003, sparse=1.22634
+   valid total=0.00206, dec=0.00116, rollout=0.02725, z_rollout=0.00224, sindy=6.12235, sparse=1.22651
+Epoch 920
+   train total=0.00418, dec=0.00295, rollout=0.02778, z_rollout=0.00218, sindy=9.32696, sparse=1.23534
+   valid total=0.00312, dec=0.00214, rollout=0.02773, z_rollout=0.00227, sindy=6.84140, sparse=1.23590
+Epoch 940
+   train total=0.00322, dec=0.00227, rollout=0.02589, z_rollout=0.00194, sindy=6.77037, sparse=1.24853
+   valid total=0.00259, dec=0.00177, rollout=0.02543, z_rollout=0.00203, sindy=5.53214, sparse=1.24912
+Epoch 960
+   train total=0.00408, dec=0.00309, rollout=0.02568, z_rollout=0.00202, sindy=7.24710, sparse=1.26050
+   valid total=0.00345, dec=0.00261, rollout=0.02597, z_rollout=0.00217, sindy=5.63616, sparse=1.26086
+Epoch 980
+   train total=0.00591, dec=0.00483, rollout=0.02576, z_rollout=0.00208, sindy=8.01751, sparse=1.27086
+   valid total=0.00557, dec=0.00469, rollout=0.02586, z_rollout=0.00233, sindy=6.06792, sparse=1.27088
+Epoch 1000
+   train total=0.00418, dec=0.00316, rollout=0.02563, z_rollout=0.00209, sindy=7.44410, sparse=1.28191
+   valid total=0.00306, dec=0.00221, rollout=0.02471, z_rollout=0.00210, sindy=5.84347, sparse=1.28235
+Epoch 1020
+   train total=0.00384, dec=0.00281, rollout=0.02543, z_rollout=0.00200, sindy=7.61357, sparse=1.29262
+   valid total=0.00445, dec=0.00357, rollout=0.02498, z_rollout=0.00214, sindy=6.13825, sparse=1.29305
+Epoch 1040
+   train total=0.00334, dec=0.00232, rollout=0.02541, z_rollout=0.00198, sindy=7.52113, sparse=1.30343
+   valid total=0.00260, dec=0.00175, rollout=0.02546, z_rollout=0.00212, sindy=5.89256, sparse=1.30418
+Epoch 1060
+   train total=0.00546, dec=0.00446, rollout=0.02466, z_rollout=0.00197, sindy=7.30442, sparse=1.31597
+   valid total=0.00405, dec=0.00322, rollout=0.02457, z_rollout=0.00214, sindy=5.73688, sparse=1.31613
+Epoch 1080
+   train total=0.00384, dec=0.00264, rollout=0.02519, z_rollout=0.00182, sindy=9.25345, sparse=1.32591
+   valid total=0.00395, dec=0.00294, rollout=0.02518, z_rollout=0.00199, sindy=7.37509, sparse=1.32651
+Epoch 1100
+   train total=0.00420, dec=0.00320, rollout=0.02412, z_rollout=0.00186, sindy=7.36157, sparse=1.33623
+   valid total=0.00272, dec=0.00187, rollout=0.02416, z_rollout=0.00201, sindy=5.92851, sparse=1.33629
+Epoch 1120
+   train total=0.00422, dec=0.00327, rollout=0.02373, z_rollout=0.00179, sindy=7.01486, sparse=1.34822
+   valid total=0.00292, dec=0.00213, rollout=0.02326, z_rollout=0.00183, sindy=5.40655, sparse=1.34842
+Epoch 1140
+   train total=0.00454, dec=0.00352, rollout=0.02429, z_rollout=0.00188, sindy=7.62524, sparse=1.35468
+   valid total=0.00357, dec=0.00269, rollout=0.02421, z_rollout=0.00203, sindy=6.29297, sparse=1.35471
+Epoch 1160
+   train total=0.00445, dec=0.00348, rollout=0.02318, z_rollout=0.00180, sindy=7.25134, sparse=1.36675
+   valid total=0.00538, dec=0.00452, rollout=0.02298, z_rollout=0.00188, sindy=6.11930, sparse=1.36720
+Epoch 1180
+   train total=0.00502, dec=0.00395, rollout=0.02301, z_rollout=0.00178, sindy=8.27541, sparse=1.37761
+   valid total=0.00431, dec=0.00333, rollout=0.02341, z_rollout=0.00196, sindy=7.26407, sparse=1.37760
+THRESHOLDING epoch 1200: 57 active coefficients, 0 newly pruned
+   Threshold epoch 1200: collapse guard skipped; pruning is kept and this epoch is accepted.
+Epoch 1200
+   train total=0.00284, dec=0.00188, rollout=0.02235, z_rollout=0.00163, sindy=7.14778, sparse=1.38832
+   valid total=0.00258, dec=0.00178, rollout=0.02253, z_rollout=0.00172, sindy=5.56664, sparse=1.38889
+Epoch 1220
+   train total=0.00438, dec=0.00341, rollout=0.02240, z_rollout=0.00167, sindy=7.32688, sparse=1.39654
+   valid total=0.00340, dec=0.00259, rollout=0.02289, z_rollout=0.00170, sindy=5.61774, sparse=1.39643
+Epoch 1240
+   train total=0.00353, dec=0.00262, rollout=0.02200, z_rollout=0.00157, sindy=6.76904, sparse=1.40762
+   valid total=0.00365, dec=0.00287, rollout=0.02211, z_rollout=0.00171, sindy=5.41741, sparse=1.40802
+Epoch 1260
+   train total=0.00426, dec=0.00329, rollout=0.02197, z_rollout=0.00165, sindy=7.30467, sparse=1.41700
+   valid total=0.00261, dec=0.00181, rollout=0.02207, z_rollout=0.00178, sindy=5.63467, sparse=1.41701
+Epoch 1280
+   train total=0.00391, dec=0.00294, rollout=0.02175, z_rollout=0.00164, sindy=7.29376, sparse=1.42584
+   valid total=0.00327, dec=0.00248, rollout=0.02131, z_rollout=0.00165, sindy=5.55596, sparse=1.42601
+Epoch 1300
+   train total=0.00659, dec=0.00556, rollout=0.02237, z_rollout=0.00174, sindy=7.89945, sparse=1.43604
+   valid total=0.00519, dec=0.00428, rollout=0.02195, z_rollout=0.00182, sindy=6.76749, sparse=1.43572
+Epoch 1320
+   train total=0.00440, dec=0.00338, rollout=0.02220, z_rollout=0.00177, sindy=7.77835, sparse=1.44493
+   valid total=0.00395, dec=0.00311, rollout=0.02223, z_rollout=0.00194, sindy=6.04738, sparse=1.44502
+Epoch 1340
+   train total=0.00501, dec=0.00402, rollout=0.02189, z_rollout=0.00168, sindy=7.45958, sparse=1.45336
+   valid total=0.00289, dec=0.00209, rollout=0.02167, z_rollout=0.00174, sindy=5.68935, sparse=1.45324
+Epoch 1360
+   train total=0.00391, dec=0.00295, rollout=0.02141, z_rollout=0.00165, sindy=7.31634, sparse=1.46215
+   valid total=0.00171, dec=0.00094, rollout=0.02109, z_rollout=0.00177, sindy=5.41629, sparse=1.46246
+Epoch 1380
+   train total=0.00424, dec=0.00326, rollout=0.02151, z_rollout=0.00163, sindy=7.51245, sparse=1.47123
+   valid total=0.00297, dec=0.00218, rollout=0.02105, z_rollout=0.00176, sindy=5.61101, sparse=1.47136
+Epoch 1400
+   train total=0.00368, dec=0.00273, rollout=0.02103, z_rollout=0.00159, sindy=7.29584, sparse=1.48066
+   valid total=0.00263, dec=0.00187, rollout=0.02051, z_rollout=0.00166, sindy=5.37197, sparse=1.48110
+Epoch 1420
+   train total=0.00371, dec=0.00276, rollout=0.02067, z_rollout=0.00153, sindy=7.22659, sparse=1.48953
+   valid total=0.00191, dec=0.00114, rollout=0.02053, z_rollout=0.00161, sindy=5.42776, sparse=1.48953
+Epoch 1440
+   train total=0.00362, dec=0.00272, rollout=0.02033, z_rollout=0.00147, sindy=6.83056, sparse=1.49814
+   valid total=0.00334, dec=0.00256, rollout=0.02107, z_rollout=0.00173, sindy=5.54563, sparse=1.49825
+Epoch 1460
+   train total=0.00434, dec=0.00333, rollout=0.02033, z_rollout=0.00145, sindy=7.87477, sparse=1.50425
+   valid total=0.00329, dec=0.00246, rollout=0.02060, z_rollout=0.00150, sindy=6.04517, sparse=1.50422
+Epoch 1480
+   train total=0.00386, dec=0.00287, rollout=0.02034, z_rollout=0.00149, sindy=7.76295, sparse=1.51350
+   valid total=0.00229, dec=0.00147, rollout=0.02010, z_rollout=0.00163, sindy=5.97217, sparse=1.51361
+THRESHOLDING epoch 1500: 56 active coefficients, 1 newly pruned
+   Threshold epoch 1500: collapse guard skipped; pruning is kept and this epoch is accepted.
+Epoch 1500
+   train total=0.00385, dec=0.00293, rollout=0.02004, z_rollout=0.00146, sindy=6.95245, sparse=1.51915
+   valid total=0.00451, dec=0.00375, rollout=0.02012, z_rollout=0.00159, sindy=5.44896, sparse=1.51943
+Epoch 1520
+   train total=0.00343, dec=0.00249, rollout=0.02014, z_rollout=0.00148, sindy=7.28781, sparse=1.52499
+   valid total=0.00247, dec=0.00167, rollout=0.02039, z_rollout=0.00160, sindy=5.78244, sparse=1.52520
+Epoch 1540
+   train total=0.00407, dec=0.00313, rollout=0.02010, z_rollout=0.00150, sindy=7.26973, sparse=1.53264
+   valid total=0.00180, dec=0.00102, rollout=0.02012, z_rollout=0.00152, sindy=5.60286, sparse=1.53288
+Epoch 1560
+   train total=0.00365, dec=0.00276, rollout=0.01955, z_rollout=0.00136, sindy=6.77124, sparse=1.54182
+   valid total=0.00269, dec=0.00195, rollout=0.01977, z_rollout=0.00147, sindy=5.20345, sparse=1.54194
+Epoch 1580
+   train total=0.00376, dec=0.00284, rollout=0.01939, z_rollout=0.00139, sindy=7.01501, sparse=1.54913
+   valid total=0.00272, dec=0.00193, rollout=0.01963, z_rollout=0.00149, sindy=5.78733, sparse=1.54913
+Epoch 1600
+   train total=0.00320, dec=0.00230, rollout=0.01921, z_rollout=0.00139, sindy=6.84818, sparse=1.55661
+   valid total=0.00288, dec=0.00212, rollout=0.01933, z_rollout=0.00143, sindy=5.44358, sparse=1.55679
+Epoch 1620
+   train total=0.00228, dec=0.00143, rollout=0.01897, z_rollout=0.00134, sindy=6.40494, sparse=1.56315
+   valid total=0.00210, dec=0.00139, rollout=0.01905, z_rollout=0.00142, sindy=4.98010, sparse=1.56387
+Epoch 1640
+   train total=0.00379, dec=0.00293, rollout=0.01854, z_rollout=0.00132, sindy=6.60987, sparse=1.57217
+   valid total=0.00320, dec=0.00244, rollout=0.01848, z_rollout=0.00146, sindy=5.54494, sparse=1.57221
+Epoch 1660
+   train total=0.00473, dec=0.00382, rollout=0.01873, z_rollout=0.00135, sindy=7.04616, sparse=1.57985
+   valid total=0.00983, dec=0.00894, rollout=0.01972, z_rollout=0.00162, sindy=6.72555, sparse=1.57983
+Epoch 1680
+   train total=0.00480, dec=0.00388, rollout=0.01883, z_rollout=0.00134, sindy=7.18443, sparse=1.58616
+   valid total=0.00414, dec=0.00338, rollout=0.01943, z_rollout=0.00137, sindy=5.51309, sparse=1.58587
+Epoch 1700
+   train total=0.00315, dec=0.00230, rollout=0.01839, z_rollout=0.00131, sindy=6.53737, sparse=1.59110
+   valid total=0.00238, dec=0.00162, rollout=0.01838, z_rollout=0.00142, sindy=5.55816, sparse=1.59144
+Epoch 1720
+   train total=0.00311, dec=0.00227, rollout=0.01829, z_rollout=0.00125, sindy=6.36546, sparse=1.59883
+   valid total=0.00263, dec=0.00192, rollout=0.01826, z_rollout=0.00138, sindy=5.12665, sparse=1.59895
+Epoch 1740
+   train total=0.00315, dec=0.00230, rollout=0.01813, z_rollout=0.00127, sindy=6.52425, sparse=1.60568
+   valid total=0.00240, dec=0.00165, rollout=0.01811, z_rollout=0.00143, sindy=5.53519, sparse=1.60613
+Epoch 1760
+   train total=0.00506, dec=0.00414, rollout=0.01832, z_rollout=0.00135, sindy=7.12694, sparse=1.61149
+   valid total=0.00387, dec=0.00306, rollout=0.01839, z_rollout=0.00148, sindy=5.99514, sparse=1.61108
+Epoch 1780
+   train total=0.00362, dec=0.00275, rollout=0.01804, z_rollout=0.00125, sindy=6.67257, sparse=1.61779
+   valid total=0.00535, dec=0.00454, rollout=0.01853, z_rollout=0.00146, sindy=6.00660, sparse=1.61805
+THRESHOLDING epoch 1800: 56 active coefficients, 0 newly pruned
+   Threshold epoch 1800: collapse guard skipped; pruning is kept and this epoch is accepted.
+Epoch 1800
+   train total=0.00386, dec=0.00292, rollout=0.01799, z_rollout=0.00119, sindy=7.41950, sparse=1.62342
+   valid total=0.00319, dec=0.00241, rollout=0.01809, z_rollout=0.00126, sindy=5.89169, sparse=1.62355
+Epoch 1820
+   train total=0.00379, dec=0.00296, rollout=0.01735, z_rollout=0.00121, sindy=6.39769, sparse=1.63213
+   valid total=0.00509, dec=0.00435, rollout=0.01767, z_rollout=0.00132, sindy=5.38859, sparse=1.63249
+Epoch 1840
+   train total=0.00325, dec=0.00238, rollout=0.01763, z_rollout=0.00125, sindy=6.77133, sparse=1.63649
+   valid total=0.00205, dec=0.00135, rollout=0.01721, z_rollout=0.00132, sindy=5.07271, sparse=1.63707
+Epoch 1860
+   train total=0.00548, dec=0.00451, rollout=0.01777, z_rollout=0.00126, sindy=7.73863, sparse=1.64355
+   valid total=0.00214, dec=0.00137, rollout=0.01708, z_rollout=0.00122, sindy=5.81326, sparse=1.64329
+Epoch 1880
+   train total=0.00276, dec=0.00193, rollout=0.01723, z_rollout=0.00117, sindy=6.48060, sparse=1.64957
+   valid total=0.00244, dec=0.00172, rollout=0.01712, z_rollout=0.00116, sindy=5.27033, sparse=1.65022
+Epoch 1900
+   train total=0.01180, dec=0.00980, rollout=0.01979, z_rollout=0.00151, sindy=17.90469, sparse=1.65161
+   valid total=0.00885, dec=0.00752, rollout=0.01987, z_rollout=0.00153, sindy=11.18379, sparse=1.65120
+Epoch 1920
+   train total=0.00348, dec=0.00263, rollout=0.01686, z_rollout=0.00110, sindy=6.60052, sparse=1.66195
+   valid total=0.00269, dec=0.00198, rollout=0.01688, z_rollout=0.00121, sindy=5.19008, sparse=1.66203
+Epoch 1940
+   train total=0.00337, dec=0.00250, rollout=0.01744, z_rollout=0.00118, sindy=6.75456, sparse=1.66518
+   valid total=0.00304, dec=0.00235, rollout=0.01722, z_rollout=0.00125, sindy=4.97533, sparse=1.66527
+Epoch 1960
+   train total=0.00338, dec=0.00250, rollout=0.01740, z_rollout=0.00122, sindy=6.87583, sparse=1.67073
+   valid total=0.00409, dec=0.00332, rollout=0.01796, z_rollout=0.00132, sindy=5.77384, sparse=1.67088
+Epoch 1980
+   train total=0.00388, dec=0.00299, rollout=0.01751, z_rollout=0.00121, sindy=7.01111, sparse=1.67550
+   valid total=0.00202, dec=0.00130, rollout=0.01712, z_rollout=0.00127, sindy=5.37248, sparse=1.67538
+Epoch 2000
+   train total=0.00527, dec=0.00434, rollout=0.01753, z_rollout=0.00127, sindy=7.35393, sparse=1.68091
+   valid total=0.00297, dec=0.00218, rollout=0.01733, z_rollout=0.00147, sindy=5.99149, sparse=1.68050
+Epoch 2020
+   train total=0.00411, dec=0.00325, rollout=0.01687, z_rollout=0.00118, sindy=6.72643, sparse=1.68943
+   valid total=0.00343, dec=0.00166, rollout=0.01650, z_rollout=0.00134, sindy=15.80820, sparse=1.68925
+Epoch 2040
+   train total=0.00240, dec=0.00156, rollout=0.01690, z_rollout=0.00117, sindy=6.53268, sparse=1.69404
+   valid total=0.00273, dec=0.00202, rollout=0.01694, z_rollout=0.00128, sindy=5.21124, sparse=1.69480
+Epoch 2060
+   train total=0.00487, dec=0.00376, rollout=0.01695, z_rollout=0.00110, sindy=9.21628, sparse=1.70060
+   valid total=0.00574, dec=0.00486, rollout=0.01745, z_rollout=0.00122, sindy=6.84653, sparse=1.70089
+Epoch 2080
+   train total=0.00365, dec=0.00279, rollout=0.01671, z_rollout=0.00113, sindy=6.78088, sparse=1.70371
+   valid total=0.00321, dec=0.00247, rollout=0.01657, z_rollout=0.00127, sindy=5.51863, sparse=1.70403
+THRESHOLDING epoch 2100: 55 active coefficients, 1 newly pruned
+   Threshold epoch 2100: collapse guard skipped; pruning is kept and this epoch is accepted.
+Epoch 2100
+   train total=0.00417, dec=0.00331, rollout=0.01699, z_rollout=0.00115, sindy=6.72804, sparse=1.70564
+   valid total=0.00306, dec=0.00235, rollout=0.01686, z_rollout=0.00122, sindy=5.22036, sparse=1.70562
+Epoch 2120
+   train total=0.00535, dec=0.00439, rollout=0.01756, z_rollout=0.00129, sindy=7.66841, sparse=1.70826
+   valid total=0.00248, dec=0.00171, rollout=0.01748, z_rollout=0.00139, sindy=5.76074, sparse=1.70789
+Epoch 2140
+   train total=0.39168, dec=0.01439, rollout=0.22914, z_rollout=0.03060, sindy=3749.54251, sparse=1.71127
+   valid total=0.00825, dec=0.00662, rollout=0.01970, z_rollout=0.00150, sindy=14.09795, sparse=1.71076
+Epoch 2160
+   train total=0.00282, dec=0.00194, rollout=0.01658, z_rollout=0.00103, sindy=6.97161, sparse=1.71990
+   valid total=0.00205, dec=0.00133, rollout=0.01674, z_rollout=0.00109, sindy=5.25508, sparse=1.72027
+Epoch 2180
+   train total=0.00296, dec=0.00212, rollout=0.01643, z_rollout=0.00104, sindy=6.58853, sparse=1.72623
+   valid total=0.00414, dec=0.00340, rollout=0.01663, z_rollout=0.00117, sindy=5.58424, sparse=1.72638
+Epoch 2200
+   train total=0.00357, dec=0.00266, rollout=0.01719, z_rollout=0.00118, sindy=7.12095, sparse=1.72727
+   valid total=0.00178, dec=0.00102, rollout=0.01726, z_rollout=0.00130, sindy=5.60943, sparse=1.72742
+Epoch 2220
+   train total=0.00356, dec=0.00266, rollout=0.01708, z_rollout=0.00120, sindy=7.09323, sparse=1.73224
+   valid total=0.00397, dec=0.00322, rollout=0.01756, z_rollout=0.00135, sindy=5.63370, sparse=1.73233
+Epoch 2240
+   train total=0.00352, dec=0.00262, rollout=0.01697, z_rollout=0.00113, sindy=7.15946, sparse=1.73782
+   valid total=0.00412, dec=0.00332, rollout=0.01733, z_rollout=0.00129, sindy=6.13270, sparse=1.73796
+Epoch 2260
+   train total=0.00315, dec=0.00229, rollout=0.01654, z_rollout=0.00109, sindy=6.83073, sparse=1.74418
+   valid total=0.00255, dec=0.00183, rollout=0.01641, z_rollout=0.00120, sindy=5.33901, sparse=1.74459
+Epoch 2280
+   train total=0.00395, dec=0.00303, rollout=0.01663, z_rollout=0.00116, sindy=7.39870, sparse=1.74843
+   valid total=0.00342, dec=0.00262, rollout=0.01691, z_rollout=0.00126, sindy=6.05040, sparse=1.74824
+Epoch 2300
+   train total=0.00286, dec=0.00202, rollout=0.01603, z_rollout=0.00102, sindy=6.66222, sparse=1.75621
+   valid total=0.00341, dec=0.00271, rollout=0.01609, z_rollout=0.00111, sindy=5.25265, sparse=1.75648
+Epoch 2320
+   train total=0.00414, dec=0.00324, rollout=0.01628, z_rollout=0.00112, sindy=7.15620, sparse=1.76129
+   valid total=0.00357, dec=0.00280, rollout=0.01639, z_rollout=0.00121, sindy=5.94603, sparse=1.76128
+Epoch 2340
+   train total=0.00402, dec=0.00313, rollout=0.01630, z_rollout=0.00106, sindy=7.07629, sparse=1.76496
+   valid total=0.00415, dec=0.00341, rollout=0.01637, z_rollout=0.00118, sindy=5.62931, sparse=1.76507
+Epoch 2360
+   train total=0.00334, dec=0.00251, rollout=0.01592, z_rollout=0.00104, sindy=6.59646, sparse=1.77127
+   valid total=0.00269, dec=0.00198, rollout=0.01626, z_rollout=0.00118, sindy=5.32558, sparse=1.77130
+Epoch 2380
+   train total=0.00338, dec=0.00256, rollout=0.01574, z_rollout=0.00102, sindy=6.44534, sparse=1.77506
+   valid total=0.00192, dec=0.00123, rollout=0.01586, z_rollout=0.00114, sindy=5.08201, sparse=1.77519
+THRESHOLDING epoch 2400: 55 active coefficients, 0 newly pruned
+   Threshold epoch 2400: collapse guard skipped; pruning is kept and this epoch is accepted.
+Epoch 2400
+   train total=0.00511, dec=0.00382, rollout=0.01718, z_rollout=0.00122, sindy=10.99301, sparse=1.77718
+   valid total=0.00669, dec=0.00563, rollout=0.01757, z_rollout=0.00133, sindy=8.66738, sparse=1.77766
+Epoch 2420
+   train total=0.00286, dec=0.00204, rollout=0.01555, z_rollout=0.00097, sindy=6.45942, sparse=1.78609
+   valid total=0.00219, dec=0.00150, rollout=0.01558, z_rollout=0.00104, sindy=5.17414, sparse=1.78635
+Epoch 2440
+   train total=0.00527, dec=0.00437, rollout=0.01613, z_rollout=0.00108, sindy=7.19031, sparse=1.79083
+   valid total=0.00273, dec=0.00199, rollout=0.01579, z_rollout=0.00112, sindy=5.56365, sparse=1.79072
+Epoch 2460
+   train total=0.00413, dec=0.00324, rollout=0.01624, z_rollout=0.00115, sindy=7.14077, sparse=1.79282
+   valid total=0.00399, dec=0.00323, rollout=0.01655, z_rollout=0.00125, sindy=5.75722, sparse=1.79261
+Epoch 2480
+   train total=0.00497, dec=0.00399, rollout=0.01705, z_rollout=0.00119, sindy=7.91633, sparse=1.79480
+   valid total=0.00390, dec=0.00309, rollout=0.01651, z_rollout=0.00126, sindy=6.24726, sparse=1.79433
+Epoch 2500
+   train total=0.00355, dec=0.00270, rollout=0.01617, z_rollout=0.00108, sindy=6.68435, sparse=1.79995
+   valid total=0.00308, dec=0.00234, rollout=0.01640, z_rollout=0.00122, sindy=5.57552, sparse=1.80005
+Epoch 2520
+   train total=0.00439, dec=0.00349, rollout=0.01661, z_rollout=0.00121, sindy=7.19693, sparse=1.80436
+   valid total=0.00592, dec=0.00512, rollout=0.01636, z_rollout=0.00130, sindy=6.22823, sparse=1.80448
+Epoch 2540
+   train total=0.00339, dec=0.00254, rollout=0.01594, z_rollout=0.00106, sindy=6.64851, sparse=1.81109
+   valid total=0.00361, dec=0.00288, rollout=0.01604, z_rollout=0.00118, sindy=5.48491, sparse=1.81134
+Epoch 2560
+   train total=0.00341, dec=0.00256, rollout=0.01602, z_rollout=0.00109, sindy=6.72046, sparse=1.81422
+   valid total=0.00400, dec=0.00325, rollout=0.01628, z_rollout=0.00121, sindy=5.65801, sparse=1.81455
+Epoch 2580
+   train total=0.00365, dec=0.00280, rollout=0.01602, z_rollout=0.00110, sindy=6.72515, sparse=1.81831
+   valid total=0.00496, dec=0.00420, rollout=0.01633, z_rollout=0.00124, sindy=5.78365, sparse=1.81839
+Epoch 2600
+   train total=0.00321, dec=0.00237, rollout=0.01546, z_rollout=0.00103, sindy=6.63057, sparse=1.82605
+   valid total=0.00472, dec=0.00397, rollout=0.01592, z_rollout=0.00116, sindy=5.68841, sparse=1.82640
+Epoch 2620
+   train total=7472.41874, dec=2.11007, rollout=0.02250, z_rollout=15.76731, sindy=74702926.32706, sparse=1.82850
+   valid total=0.01830, dec=0.01588, rollout=0.02198, z_rollout=0.00149, sindy=21.78131, sparse=1.82771
+Epoch 2640
+   train total=0.00321, dec=0.00238, rollout=0.01498, z_rollout=0.00089, sindy=6.59113, sparse=1.83591
+   valid total=0.00420, dec=0.00351, rollout=0.01502, z_rollout=0.00097, sindy=5.15112, sparse=1.83610
+Epoch 2660
+   train total=0.00318, dec=0.00235, rollout=0.01544, z_rollout=0.00098, sindy=6.55759, sparse=1.83841
+   valid total=0.00277, dec=0.00208, rollout=0.01515, z_rollout=0.00102, sindy=5.20025, sparse=1.83847
+Epoch 2680
+   train total=0.00410, dec=0.00324, rollout=0.01538, z_rollout=0.00099, sindy=6.80741, sparse=1.84318
+   valid total=0.00270, dec=0.00200, rollout=0.01526, z_rollout=0.00101, sindy=5.30647, sparse=1.84337
+THRESHOLDING epoch 2700: 54 active coefficients, 1 newly pruned
+   Threshold epoch 2700: collapse guard skipped; pruning is kept and this epoch is accepted.
+Epoch 2700
+   train total=0.00329, dec=0.00249, rollout=0.01510, z_rollout=0.00099, sindy=6.29941, sparse=1.84665
+   valid total=0.00294, dec=0.00225, rollout=0.01506, z_rollout=0.00110, sindy=5.12178, sparse=1.84693
+Epoch 2720
+   train total=0.00427, dec=0.00340, rollout=0.01540, z_rollout=0.00108, sindy=6.94462, sparse=1.84936
+   valid total=0.00383, dec=0.00306, rollout=0.01532, z_rollout=0.00117, sindy=5.99083, sparse=1.84942
+Epoch 2740
+   train total=0.00509, dec=0.00421, rollout=0.01552, z_rollout=0.00101, sindy=7.13976, sparse=1.85415
+   valid total=0.00278, dec=0.00205, rollout=0.01513, z_rollout=0.00102, sindy=5.60229, sparse=1.85392
+Epoch 2760
+   train total=0.00293, dec=0.00211, rollout=0.01515, z_rollout=0.00098, sindy=6.48553, sparse=1.85889
+   valid total=0.00189, dec=0.00124, rollout=0.01474, z_rollout=0.00104, sindy=4.87262, sparse=1.85903
+Epoch 2780
+   train total=0.00443, dec=0.00345, rollout=0.01545, z_rollout=0.00104, sindy=7.99732, sparse=1.86175
+   valid total=0.00412, dec=0.00336, rollout=0.01543, z_rollout=0.00103, sindy=5.83975, sparse=1.86178
+Epoch 2800
+   train total=0.00442, dec=0.00344, rollout=0.01531, z_rollout=0.00100, sindy=7.98285, sparse=1.86683
+   valid total=0.00350, dec=0.00269, rollout=0.01530, z_rollout=0.00109, sindy=6.41658, sparse=1.86674
+Epoch 2820
+   train total=0.00291, dec=0.00212, rollout=0.01463, z_rollout=0.00093, sindy=6.25511, sparse=1.87216
+   valid total=0.00223, dec=0.00153, rollout=0.01441, z_rollout=0.00094, sindy=5.32761, sparse=1.87246
+Epoch 2840
+   train total=0.00287, dec=0.00206, rollout=0.01477, z_rollout=0.00091, sindy=6.47910, sparse=1.87573
+   valid total=0.00307, dec=0.00237, rollout=0.01474, z_rollout=0.00094, sindy=5.36766, sparse=1.87604
+Epoch 2860
+   train total=0.00455, dec=0.00368, rollout=0.01490, z_rollout=0.00097, sindy=6.94059, sparse=1.87952
+   valid total=0.00386, dec=0.00313, rollout=0.01493, z_rollout=0.00099, sindy=5.64896, sparse=1.87966
+Epoch 2880
+   train total=0.00304, dec=0.00226, rollout=0.01451, z_rollout=0.00091, sindy=6.21134, sparse=1.88337
+   valid total=0.00259, dec=0.00190, rollout=0.01442, z_rollout=0.00095, sindy=5.26203, sparse=1.88359
+Epoch 2900
+   train total=0.00344, dec=0.00250, rollout=0.01462, z_rollout=0.00091, sindy=7.69487, sparse=1.88818
+   valid total=0.00456, dec=0.00373, rollout=0.01482, z_rollout=0.00097, sindy=6.64079, sparse=1.88818
+Epoch 2920
+   train total=0.00393, dec=0.00308, rollout=0.01454, z_rollout=0.00092, sindy=6.91447, sparse=1.89206
+   valid total=0.00325, dec=0.00252, rollout=0.01440, z_rollout=0.00097, sindy=5.67598, sparse=1.89186
+Epoch 2940
+   train total=0.00322, dec=0.00238, rollout=0.01472, z_rollout=0.00089, sindy=6.68595, sparse=1.89331
+   valid total=0.00278, dec=0.00207, rollout=0.01474, z_rollout=0.00094, sindy=5.42831, sparse=1.89354
+Epoch 2960
+   train total=0.00427, dec=0.00340, rollout=0.01498, z_rollout=0.00096, sindy=6.99563, sparse=1.89572
+   valid total=0.00374, dec=0.00299, rollout=0.01484, z_rollout=0.00106, sindy=5.77942, sparse=1.89588
+Epoch 2980
+   train total=0.00393, dec=0.00309, rollout=0.01481, z_rollout=0.00097, sindy=6.76278, sparse=1.89938
+   valid total=0.00479, dec=0.00405, rollout=0.01498, z_rollout=0.00113, sindy=5.73329, sparse=1.89923
+THRESHOLDING epoch 3000: 54 active coefficients, 0 newly pruned
+   Threshold epoch 3000: collapse guard skipped; pruning is kept and this epoch is accepted.
+Epoch 3000
+   train total=0.00366, dec=0.00283, rollout=0.01449, z_rollout=0.00093, sindy=6.63333, sparse=1.90410
+   valid total=0.00382, dec=0.00310, rollout=0.01457, z_rollout=0.00106, sindy=5.51511, sparse=1.90407
+POSTTRAINING: DECODER ONLY WITH CACHED FIXED-SINDY ROLLOUTS
+   frozen: encoder + SINDy coefficients
+   trainable: decoder only
+   path: X_{s-w+1:s} -> frozen encoder -> z_s/v_s -> fixed SINDy rollout z(s:T) -> decoder -> X(s:T)
+   fixed SINDy rollouts are computed once before decoder training and cached on CPU.
+   loading formal checkpoint for posttraining: source=last_safe, path=/data/home/zhuyibjut/aeleap/robot1/outputs/tabular_window_sindy_2026_05_31_20_22_30_last_safe_formal.pt
+/data/home/zhuyibjut/aeleap/robot1/training.py:758: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(path, map_location=device)
+   loaded formal checkpoint: phase=formal_last_safe, epoch=3000, best_val_loss=0.003819831651635468
+   building posttrain dataloaders...
+   posttrain train samples: 80; batch_size=4
+   posttrain valid samples: 10; batch_size=4
+   building fixed-SINDy rollout caches from segment-start initial states...
+Built train posttrain fixed-SINDy rollout cache: 200 cached start batches, 800 rollouts, 220000 target frames.
+Built val posttrain fixed-SINDy rollout cache: 30 cached start batches, 100 rollouts, 27500 target frames.
+Posttrain decoder-only fixed-rollout Epoch 0
+   train rollout-dec=0.01682
+   valid rollout-dec=0.01751
+Posttrain decoder-only fixed-rollout Epoch 20
+   train rollout-dec=0.01598
+   valid rollout-dec=0.01731
+Posttrain decoder-only fixed-rollout Epoch 40
+   train rollout-dec=0.01587
+   valid rollout-dec=0.01729
+Posttrain decoder-only fixed-rollout Epoch 60
+   train rollout-dec=0.01582
+   valid rollout-dec=0.01726
+Posttrain decoder-only fixed-rollout Epoch 80
+   train rollout-dec=0.01577
+   valid rollout-dec=0.01723
+Posttrain decoder-only fixed-rollout Epoch 100
+   train rollout-dec=0.01574
+   valid rollout-dec=0.01721
+Posttrain decoder-only fixed-rollout Epoch 120
+   train rollout-dec=0.01572
+   valid rollout-dec=0.01720
+Posttrain decoder-only fixed-rollout Epoch 140
+   train rollout-dec=0.01570
+   valid rollout-dec=0.01718
+Posttrain decoder-only fixed-rollout Epoch 160
+   train rollout-dec=0.01568
+   valid rollout-dec=0.01718
+Posttrain decoder-only fixed-rollout Epoch 180
+   train rollout-dec=0.01567
+   valid rollout-dec=0.01718
+Posttrain decoder-only fixed-rollout Epoch 200
+   train rollout-dec=0.01566
+   valid rollout-dec=0.01718
+Posttrain decoder-only fixed-rollout Epoch 220
+   train rollout-dec=0.01565
+   valid rollout-dec=0.01718
+Posttrain decoder-only fixed-rollout Epoch 240
+   train rollout-dec=0.01564
+   valid rollout-dec=0.01718
+Posttrain decoder-only fixed-rollout Epoch 260
+   train rollout-dec=0.01563
+   valid rollout-dec=0.01718
+Posttrain decoder-only fixed-rollout Epoch 280
+   train rollout-dec=0.01562
+   valid rollout-dec=0.01717
+Posttrain decoder-only fixed-rollout Epoch 300
+   train rollout-dec=0.01561
+   valid rollout-dec=0.01717
+Posttrain decoder-only fixed-rollout Epoch 320
+   train rollout-dec=0.01560
+   valid rollout-dec=0.01717
+Posttrain decoder-only fixed-rollout Epoch 340
+   train rollout-dec=0.01559
+   valid rollout-dec=0.01718
+Posttrain decoder-only fixed-rollout Epoch 360
+   train rollout-dec=0.01559
+   valid rollout-dec=0.01719
+Posttrain decoder-only fixed-rollout Epoch 380
+   train rollout-dec=0.01558
+   valid rollout-dec=0.01719
+Posttrain decoder-only fixed-rollout Epoch 400
+   train rollout-dec=0.01558
+   valid rollout-dec=0.01718
+Posttrain decoder-only fixed-rollout Epoch 420
+   train rollout-dec=0.01557
+   valid rollout-dec=0.01718
+Posttrain decoder-only fixed-rollout Epoch 440
+   train rollout-dec=0.01556
+   valid rollout-dec=0.01719
+Posttrain decoder-only fixed-rollout Epoch 460
+   train rollout-dec=0.01556
+   valid rollout-dec=0.01720
+Posttrain decoder-only fixed-rollout Epoch 480
+   train rollout-dec=0.01555
+   valid rollout-dec=0.01720
+Posttrain decoder-only fixed-rollout Epoch 500
+   train rollout-dec=0.01555
+   valid rollout-dec=0.01720
+Training finished. Best validation loss: 0.01717
+Best formal rollout loss: 0.01408
+Best model saved to: /data/home/zhuyibjut/aeleap/robot1/outputs/tabular_window_sindy_2026_05_31_20_22_30_best.pt
+Best formal rollout checkpoint saved to: /data/home/zhuyibjut/aeleap/robot1/outputs/tabular_window_sindy_2026_05_31_20_22_30_best_formal_rollout.pt
+Last safe formal checkpoint saved to: /data/home/zhuyibjut/aeleap/robot1/outputs/tabular_window_sindy_2026_05_31_20_22_30_last_safe_formal.pt
+Last model saved to: /data/home/zhuyibjut/aeleap/robot1/outputs/tabular_window_sindy_2026_05_31_20_22_30_last.pt

@@ -1,0 +1,99 @@
+{
+  "checkpoint": "outputs/duffing_video_sindy_2026_06_12_10_28_39_best.pt",
+  "test_dir": "test",
+  "model_order": 2,
+  "latent_dim": 2,
+  "pca_selected_dim": 2,
+  "pre_pca_latent_dim": 8,
+  "pca_variance_threshold": NaN,
+  "poly_order": 1,
+  "window_length": 3,
+  "start_index": 0,
+  "normalize_x": false,
+  "normalize_forcing": false,
+  "initial_condition_mode": "encoder",
+  "mean_masked_mse": 0.0014630257443059235,
+  "mean_masked_rmse": 0.03476026063096042,
+  "files": [
+    {
+      "file_name": "beam_001.npy",
+      "num_steps": 400,
+      "dt": 0.060150146484375,
+      "start_index": 0,
+      "masked_mse": 0.0005602636374533176,
+      "masked_rmse": 0.023669888834832276
+    },
+    {
+      "file_name": "beam_002.npy",
+      "num_steps": 400,
+      "dt": 0.060150146484375,
+      "start_index": 0,
+      "masked_mse": 0.0030833205673843622,
+      "masked_rmse": 0.05552765587870932
+    },
+    {
+      "file_name": "beam_003.npy",
+      "num_steps": 400,
+      "dt": 0.060150146484375,
+      "start_index": 0,
+      "masked_mse": 0.00029949643067084253,
+      "masked_rmse": 0.017305965175939842
+    },
+    {
+      "file_name": "beam_004.npy",
+      "num_steps": 400,
+      "dt": 0.060150146484375,
+      "start_index": 0,
+      "masked_mse": 0.00035736351856030524,
+      "masked_rmse": 0.018904060901306502
+    },
+    {
+      "file_name": "beam_005.npy",
+      "num_steps": 400,
+      "dt": 0.060150146484375,
+      "start_index": 0,
+      "masked_mse": 0.004986354615539312,
+      "masked_rmse": 0.07061412475942269
+    },
+    {
+      "file_name": "beam_006.npy",
+      "num_steps": 400,
+      "dt": 0.060150146484375,
+      "start_index": 0,
+      "masked_mse": 0.0014270809479057789,
+      "masked_rmse": 0.03777672494944181
+    },
+    {
+      "file_name": "beam_007.npy",
+      "num_steps": 400,
+      "dt": 0.060150146484375,
+      "start_index": 0,
+      "masked_mse": 0.0008729727705940604,
+      "masked_rmse": 0.029546112613913534
+    },
+    {
+      "file_name": "beam_008.npy",
+      "num_steps": 400,
+      "dt": 0.060150146484375,
+      "start_index": 0,
+      "masked_mse": 0.0007646543672308326,
+      "masked_rmse": 0.027652384476403342
+    },
+    {
+      "file_name": "beam_009.npy",
+      "num_steps": 400,
+      "dt": 0.060150146484375,
+      "start_index": 0,
+      "masked_mse": 0.000772766477894038,
+      "masked_rmse": 0.027798677628513877
+    },
+    {
+      "file_name": "beam_010.npy",
+      "num_steps": 400,
+      "dt": 0.060150146484375,
+      "start_index": 0,
+      "masked_mse": 0.001505984109826386,
+      "masked_rmse": 0.03880701109112097
+    }
+  ]
+}
