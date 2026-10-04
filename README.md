@@ -9,7 +9,7 @@
 
 ## Paper
 
-**Discovering Latent Response Laws in Forced Physical Systems**
+**Discovering sparse latent equations for reduced-order modelling of forced systems**
 
 ## Abstract
 
